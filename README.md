@@ -30,7 +30,7 @@ Em cada uma das operações temos um operador aritmetico:
 * `*` multiplicação
 * `/` divisão
 * `%` resto
-
+* `**` Potênciação
 
 ## operadores-atribuicao.js
 
@@ -63,3 +63,35 @@ Operacadores de atribuição:
 * `%=` Atribuição com o resto da divisão 
 * `++` Atribuição com **incremento1**  ( *Pré* ou *Pós* incrementado). Ex: `numero ++` (Pós-incrementado) ou `++ numero` (pré-incrementado).
 * `--` Atribuição com **decremento1**  ( *Pré* ou *Pós* decrementado). Ex: `numero --` (Pós-incrementado) ou `-- numero` (Pré-incrementado).
+
+
+## operadores-comparacao.js
+
+Neste arquivo conhecemos os operadores de comparação e a estrutura lógica de decisão **if-else**.
+
+Utilizamos a palavra `if` para declarar uma condição e a palavra `else` como um complemento "Se não"
+
+~~~js
+const a = 50, b = 50;
+const condicao = a == b;
+
+if (condicao) {
+    console.log('VERDADEIRO');
+} else {
+    console.log('FALSO');
+}
+~~~
+
+Está estrutura exibe no console se a condição testada é `true` (verdadeira) ou `false` (falsa), utilisando `if` e `else` para fazer a comparação.
+
+
+Operadores de comparação:
+
+* `==`  é igual
+* `!=`  não é igual  
+* `>`   maior que  
+* `>=`  maior OU igual 
+* `<=`  menor OU igual
+* `===` é estritamente igual (Valor e tipo)
+* `!==` não é estritamente igual (Valor e tipo )
+
