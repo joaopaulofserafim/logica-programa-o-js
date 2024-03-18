@@ -1,29 +1,24 @@
-const altura = window.prompt ("Digite sua altura");
-const peso = window.prompt ("Digite seu peso");
-const imc = peso / (altura ** 2);
+const altura = window.prompt ("Digite sua altura"),
+      peso = window.prompt ("Digite seu peso"),
+      imc = peso / (altura ** 2);
 
 if ( imc <= 18.5 ) {
-    window.alert (`Abaixo do peso`);
+    window.alert (`IMC: ${imc.toFixed(1)}   Abaixo do peso`);
 
-} else if ( imc <= 24.9 ) {
-    window.alert(`IMC: ${imc}`)
-    window.alert (`Peso Normal`);
+} else if ( imc <= 25 ) {
+    window.alert (` IMC: ${imc.toFixed(1)}   Peso Normal`);
 
-} else if ( imc <= 29.9 ) {
-    window.alert(`IMC: ${imc}`)
-    window.alert (`Sobrepeso`);
+} else if ( imc <= 30 ) {
+    window.alert (` IMC: ${imc.toFixed(1)}   Sobrepeso`);
 
-} else if ( imc <= 34.9) {
-    window.alert(`IMC: ${imc}`)
-    window.alert (`Obesidade grau I`);
+} else if ( imc <= 35) {
+    window.alert (` IMC: ${imc.toFixed(1)}   Obesidade grau I`);
 
-} else if ( imc <= 39.9) {
-    window.alert(`IMC: ${imc}`)
-    window.alert (`Obesidade grau II`);
+} else if ( imc <= 40) {
+    window.alert (` IMC: ${imc.toFixed(1)}   Obesidade grau II`);
 
 } else {
-    window.alert(`IMC: ${imc}`)
-    window.alert (`Obesidade grau III`);
+    window.alert (` IMC: ${imc.toFixed(1)}   Obesidade grau III`);
 }
 
 
