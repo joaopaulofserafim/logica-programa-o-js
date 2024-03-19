@@ -1,8 +1,7 @@
 const temperatura = parseFloat(window.prompt( `Digite a temperatura:`)),
-      atual = parseFloat(window.prompt( `Unidade atual C (Celsius), F (Fahrenheit ) ou K (kelvin) :`).toUpperCase()),
-      converter = parseFloat(window.prompt(`Quer converter para, C (Celsius), F (Fahrenheit ) ou K (kelvin)?`).toUpperCase());
+      atual = window.prompt( `Unidade atual C (Celsius), F (Fahrenheit ) ou K (kelvin) :`).toUpperCase(),
+      converter = window.prompt(`Quer converter para, C (Celsius), F (Fahrenheit ) ou K (kelvin)?`).toUpperCase();
 
-      console.log(!isNaN (temperatura))
       
 let calculo = 0;
 
@@ -13,7 +12,7 @@ let   calC1 = ( temperatura * 9/5) +32,
       calK1 = temperatura - 273.15,
       calK2 = (temperatura * 1) * 9/5 - 459.67;
 
-      if ( atual == `C` &&  converter == `F`) { 
+      if ( atual == `C` &&  converter == `F`){ 
         calculo = calC1.toFixed(2);
         window.alert (`A temperatura è ${calculo} °F`)
       }
