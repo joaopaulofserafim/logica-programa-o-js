@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="">
+        <label for="LadoA">Lado A:</label>
+        <input type="number" id="LadoA">
+
+
+        <label for="LadoB">Lado B:</label>
+        <input type="number" id="LadoB">
+
+        <label for="LadoC">Lado C:</label>
+        <input type="number" id="LadoC">
+    </form>
+
+    <div>
+        <button type="button" id="btVeri"> Verificar </button>
+        <button type="button" id="clean" > Limpar </button>
+    </div>
+
+
+
+    <p id="resultado"></p>
+</body>
+<script src="desafio4.js"></script>
+<script>
+    document.querySelector('#btVeri').addEventListener('click', function () {
+        const LadoA = document.querySelector('#LadoA').value;
+        const LadoB = document.querySelector('#LadoB').value;
+        const LadoC = document.querySelector('#LadoC').value;
+        const resultado = TipoTriangulo(LadoA, LadoB, LadoC);
+        document.querySelector('#resultado').innerHTML = resultado;
+    });
+    document.querySelector('#clean').addEventListener('click', function(){
+        document.querySelector('#resultado').innerHTML = " ";
+    });
+
+
+</script>
+
+</html>
