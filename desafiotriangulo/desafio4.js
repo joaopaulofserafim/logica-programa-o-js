@@ -1,4 +1,4 @@
-let resultado
+let resultado;
 
 function TipoTriangulo(ladoA, LadoB, LadoC) {
 
