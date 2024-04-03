@@ -40,4 +40,4 @@ function converteTEM(temperatura, escala, conversao) {
     }
 
     return temperaturaConvertida;
-}
+};

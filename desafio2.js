@@ -20,6 +20,6 @@ function calculoIMC(peso, altura) {
       mensagem = 'Obesidade grau III';
    }
    return mensagem;
-}
+};
 
 

@@ -37,5 +37,5 @@ let temperaturaConvertida;
   } else {
      temperaturaConvertida = `Caracter não indetificado, digite um número`
   }
-}
+};
 
