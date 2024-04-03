@@ -46,9 +46,9 @@
 <script src="desafio4.js"></script>
 <script>
     document.querySelector('#btVeri').addEventListener('click', function () {
-        const LadoA = document.querySelector('#LadoA').value;
-        const LadoB = document.querySelector('#LadoB').value;
-        const LadoC = document.querySelector('#LadoC').value;
+        const LadoA = parseFloat(document.querySelector('#LadoA').value);
+        const LadoB = parseFloat(document.querySelector('#LadoB').value);
+        const LadoC =  parseFloat(document.querySelector('#LadoC').value);
         const resultado = TipoTriangulo(LadoA, LadoB, LadoC);
         document.querySelector('#resultado').innerHTML = resultado;
     });

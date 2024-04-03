@@ -1,30 +1,25 @@
-function calculaIMC(peso, altura) {
+function calculoIMC(peso, altura) {
 
-    const 
-        imc = peso / (altura ** 2);
-        let mensagem; 
+   const imc = peso / (altura ** 2)
+   let mensagem;
+   if (imc <= 18.5) {
+      mensagem = 'Abaixo do Peso';
 
-    if (imc <= 18.5) {
-       mensagem =`IMC: ${imc.toFixed(1)}   Abaixo do peso`;
+   } else if (imc <= 24.9) {
+      mensagem = 'Peso normal';
 
-    } else if (imc <= 25) {
-       mensagem =` IMC: ${imc.toFixed(1)}   Peso Normal`;
+   } else if (imc <= 29.9) {
+      mensagem = 'Sobrepeso';
 
-    } else if (imc <= 30) {
-       mensagem =` IMC: ${imc.toFixed(1)}   Sobrepeso`;
+   } else if (imc <= 34.9) {
+      mensagem = 'Obesidade grau I';
 
-    } else if (imc <= 35) {
-       mensagem =` IMC: ${imc.toFixed(1)}   Obesidade grau I`;
-
-    } else if (imc <= 40) {
-       mensagem =` IMC: ${imc.toFixed(1)}   Obesidade grau II`;
-
-    } else {
-       mensagem =` IMC: ${imc.toFixed(1)}   Obesidade grau III`;
-    }
-
-    return mensagem;
+   } else if (imc <= 39.9) {
+      mensagem = 'Obesidade grau II';
+   } else {
+      mensagem = 'Obesidade grau III';
+   }
+   return mensagem;
 }
-
 
 

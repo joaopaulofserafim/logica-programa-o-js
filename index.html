@@ -6,90 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperatura </title>
 </head>
+
 <body>
     <h1 style="font-size: xx-large; color: rgb(0, 0, 0); "> João Paulo </h1>
 
-    <button type="button" onclick="calculaIMC()"> Calcuradora IMC</button>
-    <button type="button" onclick="converteTemperatura()"> Conversor Temperatura</button>
 
+    <h1>Programas</h1>
+
+    <button type="button" onclick="calculoIMC()">Calculadora IMC</button>
+    <button type="button" onclick="converteTemperatura()">Conversor temperatura</button>
+    <button type="button"> <a href="desafiotriangulo/desafio4.html"> Convertor triãngulo</a></button>
 
     <h2>Calculadora IMC</h2>
-    <form action="">
+    <form action="" id="formIMC">
+
         <label for="peso">Peso:</label>
-        <input type="number" id="peso" step="0.5" min="0" min="1000">
+        <input type="number" id="peso" step="0.5" min="0" max="1000">
 
         <label for="altura">Altura:</label>
-        <input type="number" id="altura" step="0.01 " min="0" max="3">
+        <input type="number" id="altura" step="0.01" min="0" max="3">
 
-        <button type="button" id="btCalcIMC">Calcular IMC</button>
-        <button type="reset">Limpar</button>
+        <div>
+            <button type="button" id="btCalcIMC">Calcular IMC</button>
+            <button type="reset" id="btLimpar">Limpar</button>
+        </div>
+
+        </div>
     </form>
     <div id="resultadoIMC"></div>
 
-    <h2>Conversor de temperatura </h2>
-    <form action="">
-        <label for="Temperatura">Temperatura:</label>
-        <input type="number" id="ValorTemperatura">
 
+    <form action="">
+        <h2>Conversor de Temperatura</h2>
+
+        <label for="valorTemperatura">Temperatura:</label>
+        <input type="number" id="valorTemperatura">
 
         <label for="escalaAtual">Escala atual:</label>
-
-        <select id="EscalaAtual">
-            <option value="C">Celsius</option>
+        <select id="escalaAtual">
+            <option value="C" selected>Celsius</option>
             <option value="F">Fahrenhreit</option>
             <option value="K">Kelvin</option>
         </select>
 
-        <label for="escalaConvertida">Escala convertida:</label>
-
-        <select id="EscalaConvertida">
+        <label for="escalaConvertida">Escala Convertida:</label>
+        <select id="escalaConvertida">
             <option value="C">Celsius</option>
-            <option value="K" selected> Kelvin</option>
-            <option value="F">Fahrenhreit</option>
+            <option value="F" selected>Fahrenhreit</option>
+            <option value="K">Kelvin</option>
         </select>
 
         <button type="button" id="Convertor">Convertor</button>
         <button type="reset" id="Limpar">Limpar</button>
     </form>
-    <div id="resultadoTEM"></div>
 
+    <div id="resultadoTEM"></div>
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
 
     <script>
-        document.querySelector('#btCalcIMC').addEventListener('click', function () {
-            const peso = document.querySelector('#peso').value;
-            const altura = document.querySelector('#altura').value;
-            const imc = calculaIMC(peso, altura);
-            console.log(imc);
-        });
 
-
-
-       
 
         document.querySelector('#Convertor').addEventListener('click', function () {
             const valorTemperatura = document.querySelector('#valorTemperatura').value;
             const escalaAtual = document.querySelector('#escalaAtual').value;
             const escalaConvertida = document.querySelector('#escalaConvertida').value;
-            const converte = converteTEM(valorTemperatura, escalaAtual, escalaConvertida);
-            console.log(converte)
+            const converte = converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida);
             document.querySelector('#resultadoTEM').innerHTML = converte;
         });
         document.querySelector('#Limpar').addEventListener('click', function () {
             document.querySelector('#resultadoTEM').innerHTML = '';
         });
 
+    </script>
+
+    <script>
+        document.querySelector('#btCalcIMC').addEventListener('click', function () {
+            const peso = document.querySelector('#peso').value;
+            const altura = document.querySelector('#altura').value;
+            const imc = calculoIMC(peso, altura);
+            console.log(imc);
+            document.querySelector('#resultadoIMC').innerHTML = imc;
+
+        });
+        document.querySelector('#btLimpar').addEventListener('click', function () {
+            document.querySelector('#resultadoIMC').innerHTML = '';
+        });
 
     </script>
 
-
-     <h2>Exercícios</h2>
-     <nav>
-        <ul>
-            <li><a href="desafiotriangulo/desafio4.html">Classificação triangulo</a></li>
-        </ul>
-     </nav>
 </body>
 
 </html>
