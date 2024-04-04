@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="../icons8-reproduzir-64.png">
+    <title> Verificando Triângulos</title>
 </head>
 
 
 <body>
 
     <header>
-        <h1 class="h1"><strong>Verificando triângulos    m</strong></h1>
+        <h1 class="h1"><strong>Verificando triângulos</strong></h1>
     </header>
 
 
@@ -29,7 +30,7 @@
             <br>
             <br>
             <label for="LadoC"></label>
-            <input type="number" id="LadoC" placeholder="Medida do triângulo"> 
+            <input type="number" id="LadoC" placeholder="Medida do triângulo">
         </form>
 
         <p id="resultado"></p>
@@ -48,7 +49,7 @@
     document.querySelector('#btVeri').addEventListener('click', function () {
         const LadoA = parseFloat(document.querySelector('#LadoA').value);
         const LadoB = parseFloat(document.querySelector('#LadoB').value);
-        const LadoC =  parseFloat(document.querySelector('#LadoC').value);
+        const LadoC = parseFloat(document.querySelector('#LadoC').value);
         const resultado = TipoTriangulo(LadoA, LadoB, LadoC);
         document.querySelector('#resultado').innerHTML = resultado;
     });
