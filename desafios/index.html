@@ -9,59 +9,66 @@
 </head>
 
 <body>
-    <h1 style="font-size: xx-large; color: rgb(0, 0, 0); "> João Paulo F Serafim </h1>
+    <h1 class="name"> João Paulo F Serafim </h1>
 
+    <div id="all">
 
-    <h1>Programas</h1>
+        <section class="programas">
+            <h1>Programas</h1>
 
-    <button type="button" onclick="calculoIMC()">Calculadora IMC</button>
-    <button type="button" onclick="converteTemperatura()">Conversor temperatura</button>
-    <button type="button"> <a href="desafiotriangulo/desafio4.html"> Convertor triãngulo</a></button>
+            <button type="button" onclick="calculoIMC()">Calculadora IMC</button>
+            <button type="button" onclick="converteTemperatura()">Conversor temperatura</button>
+            <button type="button"> <a href="desafiotriangulo/desafio4.html"> Convertor triãngulo</a></button>
+        </section>
 
-    <h2>Calculadora IMC</h2>
-    <form action="" id="formIMC">
+        <section class="IMC">
+            <h2>Calculadora IMC</h2>
+            <form action="" id="formIMC">
 
-        <label for="peso">Peso:</label>
-        <input type="number" id="peso" step="0.5" min="0" max="1000">
+                <label for="peso">Peso:</label>
+                <input type="number" id="peso" step="0.5" min="0" max="1000">
 
-        <label for="altura">Altura:</label>
-        <input type="number" id="altura" step="0.01" min="0" max="3">
+                <label for="altura">Altura:</label>
+                <input type="number" id="altura" step="0.01" min="0" max="3">
 
-        <div>
-            <button type="button" id="btCalcIMC">Calcular IMC</button>
-            <button type="reset" id="btLimpar">Limpar</button>
-        </div>
+                <div class="buttonn">
+                    <button type="button" id="btCalcIMC">Calcular IMC</button>
+                    <button type="reset" id="btLimpar">Limpar</button>
+                </div>
 
-        </div>
-    </form>
-    <div id="resultadoIMC"></div>
+            </form>
+            <div id="resultadoIMC"></div>
+        </section>
 
+        <section class="conversor">
+            <form action="">
+                <h2>Conversor de Temperatura</h2>
 
-    <form action="">
-        <h2>Conversor de Temperatura</h2>
+                <label for="valorTemperatura">Temperatura:</label>
+                <input type="number" id="valorTemperatura">
 
-        <label for="valorTemperatura">Temperatura:</label>
-        <input type="number" id="valorTemperatura">
+                <label for="escalaAtual">Escala atual:</label>
+                <select id="escalaAtual">
+                    <option value="C" selected>Celsius</option>
+                    <option value="F">Fahrenhreit</option>
+                    <option value="K">Kelvin</option>
+                </select>
 
-        <label for="escalaAtual">Escala atual:</label>
-        <select id="escalaAtual">
-            <option value="C" selected>Celsius</option>
-            <option value="F">Fahrenhreit</option>
-            <option value="K">Kelvin</option>
-        </select>
+                <label for="escalaConvertida">Escala Convertida:</label>
+                <select id="escalaConvertida">
+                    <option value="C">Celsius</option>
+                    <option value="F" selected>Fahrenhreit</option>
+                    <option value="K">Kelvin</option>
+                </select>
+        
+                    <button type="button" id="Convertor">Convertor</button>
+                    <button type="reset" id="Limpar">Limpar</button>
+                
+            </form>
+            <div id="resultadoTEM"></div>
+        </section>
+    </div>
 
-        <label for="escalaConvertida">Escala Convertida:</label>
-        <select id="escalaConvertida">
-            <option value="C">Celsius</option>
-            <option value="F" selected>Fahrenhreit</option>
-            <option value="K">Kelvin</option>
-        </select>
-
-        <button type="button" id="Convertor">Convertor</button>
-        <button type="reset" id="Limpar">Limpar</button>
-    </form>
-
-    <div id="resultadoTEM"></div>
     <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
 
@@ -75,9 +82,9 @@
             const converte = converteTemperatura(valorTemperatura, escalaAtual, escalaConvertida);
             document.querySelector('#resultadoTEM').innerHTML = converte;
         });
-        
-        
-        
+
+
+
         document.querySelector('#Limpar').addEventListener('click', function () {
             document.querySelector('#resultadoTEM').innerHTML = '';
         });
