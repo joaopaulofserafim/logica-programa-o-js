@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+
+        <label for="nomeInclusao">Nome para incluir:</label>
+        <input type="text" id="nomeInclusao" required autofocus>
+
+        <button type="reset" id="btCadastrar">Cadastrar</button>
+
+        <button type="button" id="btMostrar">Mostrar</button>
+
+    </form>
+
+    <div id="resultado"></div>
+
+    <script>
+
+        let nomes = [];
+
+
+        document.querySelector('#btCadastrar').addEventListener('click', function () {
+
+
+            if (nomes.length < 11) {
+                nomes.push(document.querySelector('#nomeInclusao').value);
+
+            } else {
+                
+                if (nomes.includes(document.querySelector)('#nomeInclusão'.value)) {
+                    console.log('ACHEI ')
+                } else {
+                    console.log('NÃO ACHEI')
+                }
+            }
+
+
+        });
+
+        document.querySelector('#btMostrar').addEventListener('click', function () {
+
+
+            nomes.forEach((nome) => {
+                document.querySelector('#resultado').innerHTML += nome + '<br>'
+            })
+
+
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
