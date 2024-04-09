@@ -4,18 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 
+
 <body>
+
+    <h1 class="T1">Buscando Nomes</h1>
+
+
     <form action="">
+       
+        
+        <div class="buttonn">
+            <label for="nome">Nome para incluir:</label>
+            <input type="text" id="nome" required autofocus>
+            <button type="reset" id="btCadastrar">Cadastrar</button>
+            <button type="button" id="btPesquisar" class="oculto">Pesquisar</button>
+        </div>
 
-        <label for="nomeInclusao">Nome para incluir:</label>
-        <input type="text" id="nomeInclusao" required autofocus>
 
-        <button type="reset" id="btCadastrar">Cadastrar</button>
-
-        <button type="button" id="btMostrar">Mostrar</button>
 
     </form>
 
@@ -23,34 +32,51 @@
 
     <script>
 
+        document.addEventListener('keydown', (evento) => {
+
+            if (evento.key === 'Enter') {
+                evento.preventDefault();
+
+                if (nomes.length < 10) {
+                    document.querySelector('#btCadastrar').click();
+                } else {
+                    document.querySelector('#btPesquisar').click()
+                }
+            }
+        })
+
         let nomes = [];
 
 
         document.querySelector('#btCadastrar').addEventListener('click', function () {
 
+            nomes.push(document.querySelector('#nome').value);
 
-            if (nomes.length < 11) {
-                nomes.push(document.querySelector('#nomeInclusao').value);
 
-            } else {
-                
-                if (nomes.includes(document.querySelector)('#nomeInclusão'.value)) {
-                    console.log('ACHEI ')
-                } else {
-                    console.log('NÃO ACHEI')
-                }
+            if (nomes.length === 10) {
+
+
+                document.querySelector('label[for= "nome"]').innerHTML = 'Nome para pesquisar';
+
+                document.querySelector('#btCadastrar').classList.add('oculto');
+
+                document.querySelector('#btPesquisar').classList.remove('oculto');
+
+
             }
 
 
         });
 
-        document.querySelector('#btMostrar').addEventListener('click', function () {
+        document.querySelector('#btPesquisar').addEventListener('click', function () {
 
+            const nomeBuscado = document.querySelector('#nome').value;
 
-            nomes.forEach((nome) => {
-                document.querySelector('#resultado').innerHTML += nome + '<br>'
-            })
-
+            if (nomes.includes(nomeBuscado)) {
+                document.querySelector('#resultado').innerHTML = 'ACHEI ';
+            } else {
+                document.querySelector('#resultado').innerHTML = 'NÃO ACHEI'
+            }
 
         });
 
