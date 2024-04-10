@@ -24,7 +24,7 @@
         <input type="number" id="valor">
 
 
-        <button type="button" id="btV">Verificar</button>
+        <button type="button" id="btVer">Verificar</button>
         <button type="reset" id="btClean"> Limpar </button>
     </form>
 
@@ -36,11 +36,16 @@
 
 
     <script>
-        document.querySelector('#btV').addEventListener('click', function () {
-            const cliente = document.querySelector('#clientes').value;
-            const valor = parseFloat(document.querySelector('#valor').value);
-            const desconto = valorFinal(Clientes, valor);
+        document.querySelector('#btVer').addEventListener('click', function () {
+
+            clientess = document.querySelector('#clientess').value;
+            atual = parseFloat(document.querySelector('#atual').value);
+            const desconto = valorFinal(clientess, atual);
             document.querySelector('#valorFinal').innerHTML = desconto;
+        });
+
+        document.querySelector('#btClean').addEventListener('click', function () {
+            document.querySelector('#valorFinal').innerHTML = "";
         });
 
     </script>
