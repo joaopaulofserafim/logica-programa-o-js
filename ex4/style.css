@@ -24,15 +24,44 @@ button {
 .T1{
 color: rgb(255, 255, 255);
 text-align: center;
+margin-bottom: 20px;
     
 }
 
-.buttonn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.conteudo{
+    padding: 10px;
+   display: grid;
+   place-items: center;
     border-radius: 8px;
     gap: 1rem;
-    background-color: white;
-    
+    background-color: white;  
+    margin-left: 300px;
+    margin-right: 300px;
+
 }
+
+#btCadastrar:active{
+    box-shadow: inset 2px 2px 2px #555;
+}
+
+#btCadastrar{
+   background-color: blue;
+   color: white;
+   border-radius: 15px;
+   padding: 5px;
+   box-shadow: 2px 2px 2px #555;
+}
+
+#btPesquisar{
+    background-color: blue;
+    color: white;
+    border-radius: 15px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #555;
+}
+
+#btPesquisar:active{
+    box-shadow: inset 2px 2px 2px #555;
+}
+
+
