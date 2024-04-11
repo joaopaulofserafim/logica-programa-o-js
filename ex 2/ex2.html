@@ -12,6 +12,7 @@
     <h1>Descontos</h1>
 
     <form action="" id="form">
+        
         <label for="clientess">Desconto de:</label>
         <select name="" id="clientess">
             <option value="Comum">Cliente Comum</option>
@@ -26,11 +27,11 @@
 
         <button type="button" id="btVer">Verificar</button>
         <button type="reset" id="btClean"> Limpar </button>
+        <div id="valorFinal"></div>
     </form>
 
 
 
-    <div id="valorFinal"></div>
     <script src="ex2.js"></script>
 
 
@@ -45,7 +46,7 @@
         });
 
         document.querySelector('#btClean').addEventListener('click', function () {
-            document.querySelector('#valorFinal').innerHTML = "";
+            document.querySelector('#valorFinal').innerHTML = " ";
         });
 
     </script>
