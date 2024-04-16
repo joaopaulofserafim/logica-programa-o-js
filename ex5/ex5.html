@@ -12,18 +12,88 @@
 <body>
     <h1> <strong> Posto de gasolina </strong> </h1>
 
-    <thead>
+    <table border="1">
         <tr>
             <th> Álcool <strong> Até: R$ 2,89</strong></th>
             <th> Gasolina <strong> Até: R$ 5,19</strong> </th>
             </th>
         </tr>
-    </thead>
+        </thead>
 
-    
+        <tr>
+            <td>Até 20 litros, 3% de desconto por litro</td>
+            <td>Até 20 litros, 4% de desconto por litro</td>
+        </tr>
 
-    
 
-</tbody>
+        <tr>
+            <td>Mais de 20 litros, 5% de desconto por litro</td>
+            <td>Mais de 20 litros, 6% de desconto por litro</td>
+        </tr>
+    </table>
+
+    <section>
+        <form action="" id="pG">
+            <div id="btsInserir">
+
+                <label for="litros">Quantidade de litros:</label>
+                <input type="number" min="1" id="litros">
+
+                <br>
+                <br>
+
+                <label for="tpCombustivel">Tipo de Combustivel:</label>
+                <select name="" id="tpCombustivel">
+                    <option value="semTexto"> </option>
+                    <option value="Álcool">Álcool</option>
+                    <option value="Gasolina">Gasolina</option>
+                </select>
+            </div>
+            <br>
+            <div id="botoesFinais">
+                <button type="button" id="btCalc">Calcular</button>
+                <button type="reset" id="btLimp">Limpar</button>
+            </div>
+        </form>
+        <div id="resultado"></div>
+    </section>
+
+<script>
+    document.querySelector('#btLimp').addEventListener('click' , function(){
+    document.querySelector('#resultado').innerHTML = " "
+
+    });
+    document.querySelector('#btCalc').addEventListener('click', function() {
+
+        var litros = parseFloat(document.querySelector('#litros').value);
+        var tipoCombustivel = document.querySelector('#tpCombustivel').value;
+        var precoAlcool = 2.89;
+        var precoGasolina = 5.19;
+        var valorFinal
+
+
+        if (tipoCombustivel === 'Álcool'){
+            if (litros <= 20 ) {
+                valorFinal = litros* (precoAlcool - (precoAlcool * 0.03));
+            }else {
+                valorFinal = litros * (precoAlcool - (precoAlcool * 0.05));
+            }
+        } else if (tipoCombustivel === 'Gasolina'){
+            if (litros <= 20) {
+                valorFinal = litros * (precoGasolina - (precoGasolina * 0.04));
+            } else {
+                valorFinal = litros * (precoGasolina - (precoGasolina * 0.06));
+            }
+        };
+        if (tipoCombustivel === 'semTexto'){
+            window.alert('Insira um tipo de combustivel valido')
+        }
+
+        document.querySelector('#resultado').innerHTML = 'Total a pagar: R$' + valorFinal.toFixed(2)
+    });
+
+</script>
+
+</body>
 
 </html>
