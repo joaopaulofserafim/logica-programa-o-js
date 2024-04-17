@@ -1,8 +1,8 @@
 const a = true, b = true;
 
-if   {
+if {
     console.log ( `Verdadeiro`);
 
-} else {
+} else  {
     console.log( `Falso`);
 }

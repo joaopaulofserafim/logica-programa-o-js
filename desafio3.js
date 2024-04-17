@@ -1,4 +1,4 @@
-const temperatura = parseFloat(window.prompt(`Digite a temperatura:`));
+const temperatura = (window.prompt(`Digite a temperatura:`));
 
 
 if (!isNaN(temperatura)); {
@@ -34,7 +34,4 @@ if (!isNaN(temperatura)); {
   else {
     window.alert(`Erro`);
   }
-
-} else {
-  window.alert(`Caracter não reconhecido, digite um número`);
 }
