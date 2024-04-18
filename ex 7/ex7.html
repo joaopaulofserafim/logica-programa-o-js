@@ -31,11 +31,12 @@
         <div class="opcoes">
             <label for="opcoes"> <strong> Escolha uma opção:</strong> </label>
             <select name="" id="opcoes">
-                <option value="taxaMortalidade">Taxa de Mortalidade (M)</option>
-                <option value="taxaNatalidade">Taxa de Natalidade (N)</option>
+                <option value="M">Taxa de Mortalidade </option>
+                <option value="N">Taxa de Natalidade</option>
             </select>
         </div>
-        <div id="resultado"></div>
+
+        <div id="resultado"> </div>
 
     </section>
 
@@ -43,24 +44,7 @@
     <button type="button" id="btCalcu"><strong> Calcular </strong> </button>
     <button type="reset" id="Clean"><strong> Limpar </strong></button>
 
-    <script>
-        document.querySelector('#btCalcu').addEventListener('click' , function () {
-            var habitantes = parseFloat(document.querySelector('#habitantes').value);
-            var obitos = parseFloat(document.querySelector('#obitos').value);
-            var nascimentos = parseFloat(document.querySelector('#nascimentos').value);
-            var opção = parseFloat(document.querySelector('#opcoes').value);
-            let resultado = 0
-
-            if (opção === 'Taxa de Mortalidade (M)'){
-                resultado = (nascimentos * 1000) / habitantes;
-                document.querySelector('resultado').innerHTML = 
-
-                
-            }
-        })
-    </script>
-
-
+    <script src="ex7.js"></script>
 
 </body>
 
