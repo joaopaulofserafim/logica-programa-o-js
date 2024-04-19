@@ -4,11 +4,11 @@ document.querySelector('#btLimp').addEventListener('click' , function(){
     });
     document.querySelector('#btCalc').addEventListener('click', function() {
 
-        var litros = parseFloat(document.querySelector('#litros').value);
-        var tipoCombustivel = document.querySelector('#tpCombustivel').value;
-        var precoAlcool = 2.89;
-        var precoGasolina = 5.19;
-        var valorFinal
+        const litros = parseFloat(document.querySelector('#litros').value);
+        const tipoCombustivel = document.querySelector('#tpCombustivel').value;
+        const precoAlcool = 2.89;
+        const precoGasolina = 5.19;
+        const valorFinal = 0
 
 
         if (tipoCombustivel === 'Álcool'){

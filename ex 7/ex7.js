@@ -1,9 +1,9 @@
 document.querySelector('#btCalcu').addEventListener('click' , function calcularIndicador() {
-    var habitantes = parseFloat(document.querySelector('#habitantes').value);
-    var obitos = parseFloat(document.querySelector('#obitos').value);
-    var nascimentos = parseFloat(document.querySelector('#nascimentos').value);
-    var opção = document.querySelector('#opcoes').value;
-    var resultado = 0
+    const habitantes = parseFloat(document.querySelector('#habitantes').value);
+    const obitos = parseFloat(document.querySelector('#obitos').value);
+    const nascimentos = parseFloat(document.querySelector('#nascimentos').value);
+    const opção = document.querySelector('#opcoes').value;
+    let resultado = 0
 
     if (opção === "N" ){
         resultado = (nascimentos * 1000) / habitantes;
@@ -14,6 +14,6 @@ document.querySelector('#btCalcu').addEventListener('click' , function calcularI
      };
 });
 function mostrarResultado(){
-   var resultado = calcularIndicador()
+   const resultado = calcularIndicador()
    document.querySelector('#resultado').innerHTML = resultado
 }
