@@ -7,13 +7,9 @@ document.querySelector('#btV').addEventListener('click', function () {
     document.querySelector('#valorFinal').innerHTML = desconto;
 });
 
-document.querySelector('#btClean').addEventListener('click', function () {
-    document.querySelector('#valorFinal').innerHTML = " ";
-});
 
 function valorFinal(clientess, atual) {
-
-
+    
     let valorFinal = atual;
     if (clientess === 'VIP') {
         valorFinal -= (atual * 0.05);
@@ -21,4 +17,9 @@ function valorFinal(clientess, atual) {
         valorFinal -= (atual * 0.01);
     }
     return `<strong>Valor a pagar R$: ${valorFinal}</strong>`;
-}    
+};
+
+
+document.querySelector('#btClean').addEventListener('click', function () {
+    document.querySelector('#valorFinal').innerHTML = " ";
+})    

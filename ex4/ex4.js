@@ -5,10 +5,10 @@ document.addEventListener('keydown', (evento) => {
         evento.preventDefault();
 
         if (nomes.length < 10) {
-            document.querySelector('#btCadastrar').click();
-        } else {
-            document.querySelector('#btPesquisar').click()
-        }
+    document.querySelector('#btCadastrar').click();
+} else {
+    document.querySelector('#btPesquisar').click()
+}
     }
 })
 

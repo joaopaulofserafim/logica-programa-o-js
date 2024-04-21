@@ -3,13 +3,19 @@ document.querySelector('#btVer').addEventListener('click', function () {
     let timeA = parseInt(document.querySelector('#TimeA').value);
     let timeB = parseInt(document.querySelector('#TimeB').value);
 
+    let resultado;
+
+
     if (timeA === timeB) {
-        document.querySelector('#resultado').innerHTML = 'O jogo terminou em empate!'
+       resultado = 'O jogo terminou em empate!'
     } else if (timeA > timeB) {
-        document.querySelector('#resultado').innerHTML = 'Time A venceu Time b'
+       resultado = 'Time A venceu Time B'
     } else {
-        document.querySelector('#resultado').innerHTML = 'Time B venceu Time A'
+       resultado = 'Time B venceu Time A'
     }
+
+    document.querySelector('#resultado').innerHTML = resultado;
+
 });
 
 document.querySelector('#clean').addEventListener('click', function () {
