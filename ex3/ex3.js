@@ -7,11 +7,11 @@ document.querySelector('#btVer').addEventListener('click', function () {
 
 
     if (timeA === timeB) {
-       resultado = 'O jogo terminou em empate!'
+       resultado = ' <strong> O jogo terminou em empate! </strong>'
     } else if (timeA > timeB) {
-       resultado = 'Time A venceu Time B'
+       resultado = ' <strong> Time A venceu Time B </strong>'
     } else {
-       resultado = 'Time B venceu Time A'
+       resultado = ' <strong> Time B venceu Time A </strong>'
     }
 
     document.querySelector('#resultado').innerHTML = resultado;

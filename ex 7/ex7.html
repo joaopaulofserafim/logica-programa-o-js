@@ -1,71 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taxa de Natalidade e Mortalidade</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" >
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-  <title>Taxa de Natalidade e Mortalidade</title>
-</head>
+  <body>
+    <h1>Taxa de Natalidade e Mortalidade</h1>
 
-<body>
+    <section id="inputs">
+      <div class="habitantes">
+        <label for="habitantes"><strong>Habitantes:</strong></label>
+        <input type="number" id="habitantes" />
+      </div>
 
-  <h1>Taxa de Natalidade e Mortalidade</h1>
+      <div class="obitos">
+        <label for="obitos"><strong>Óbitos:</strong></label>
+        <input type="number" id="obitos" />
+      </div>
 
-  <section id="inputs">
-    <div class="habitantes">
-      <label for="habitantes"><strong>Habitantes:</strong></label>
-      <input type="number" id="habitantes" >
-    </div>
+      <div class="nascimentos">
+        <label for="nascimentos"><strong>Nascimentos:</strong></label>
+        <input type="number" id="nascimentos" /> <br />
+        <br />
+      </div>
 
-    <div class="obitos">
-      <label for="obitos"><strong>Óbitos:</strong></label>
-      <input type="number" id="obitos">
-    </div>
+      <div class="opcoes">
+        <label for="opcoes"><strong>Escolha uma opção:</strong></label>
+        <select name="" id="opcoes">
+          <option value="M">Taxa de Mortalidade</option>
+          <option value="N">Taxa de Natalidade</option>
+        </select>
+      </div>
 
-    <div class="nascimentos">
-      <label for="nascimentos"><strong>Nascimentos:</strong></label>
-      <input type="number" id="nascimentos" > <br >
-      <br >
-    </div>
+      <div id="resultado"></div>
+    </section>
 
-    <div class="opcoes">
-      <label for="opcoes"> <strong> Escolha uma opção:</strong> </label>
-      <select name="" id="opcoes">
-        <option value="M">Taxa de Mortalidade</option>
-        <option value="N">Taxa de Natalidade</option>
-      </select>
-    </div>
+    <button type="button" id="btCalcu">Calcular</button>
+    <button type="reset" id="Clean">Limpar</button>
 
-    <div id="resultado"></div>
-  </section>
-
-  <button type="button" id="btCalcu">Calcular</button>
-  <button type="reset" id="Clean">Limpar</button>
-
-  <script>
-    document.querySelector('#btCalcu').addEventListener('click', function () {
-      let resultado = calcularIndicador();
-      document.querySelector('#resultado').innerHTML = resultado;
-    });
-
-    function calcularIndicador() {
-      const habitantes = parseFloat(document.querySelector('#habitantes').value);
-      const obitos = parseFloat(document.querySelector('#obitos').value);
-      const nascimentos = parseFloat(document.querySelector('#nascimentos').value);
-      const opção = document.querySelector('#opcoes').value;
-      let resultado = 0;
-
-      if (opção === "N") {
-        resultado = (nascimentos * 1000) / habitantes;
-        return "Taxa de Natalidade: " + resultado.toFixed(2);
-      } else if (opção === "M") {
-        resultado = (obitos * 1000) / habitantes;
-        return "Taxa de Mortalidade: " + resultado.toFixed(2);
-      }
-      return resultado;
-    }
-  </script>
-
-</body>
-
+    <script src="ex7.js"></script>
+  </body>
 </html>

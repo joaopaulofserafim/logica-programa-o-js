@@ -22,7 +22,7 @@ if (ladoA === LadoB && LadoB === LadoC) {
 } else if (ladoA != LadoB && ladoA != LadoC && LadoB && LadoC) {
     return "Escaleno";
 } else {
-    erro = "Essas medidas não são validas";
+    return erro = "Essas medidas não são validas";
 }
 }
 
