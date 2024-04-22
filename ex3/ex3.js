@@ -1,23 +1,25 @@
 document.querySelector('#btVer').addEventListener('click', function () {
 
-    let timeA = parseInt(document.querySelector('#TimeA').value);
-    let timeB = parseInt(document.querySelector('#TimeB').value);
+   let timeA = parseInt(document.querySelector('#TimeA').value);
+   let timeB = parseInt(document.querySelector('#TimeB').value);
 
-    let resultado;
+   let resultado;
 
 
-    if (timeA === timeB) {
-       resultado = ' <strong> O jogo terminou em empate! </strong>'
-    } else if (timeA > timeB) {
-       resultado = ' <strong> Time A venceu Time B </strong>'
-    } else {
-       resultado = ' <strong> Time B venceu Time A </strong>'
-    }
+   if (timeA < 0 || timeB < 0) {
+      resultado = '<strong>Adicione um valor maior ou igual a Zero</strong> '
+   }else if (timeA === timeB) {
+      resultado = ' <strong> O jogo terminou em empate! </strong>'
+   } else if (timeA > timeB) {
+      resultado = ' <strong> Time A venceu Time B </strong>'
+   } else if (timeA < timeB) {
+      resultado = ' <strong> Time B venceu Time A </strong>'
+   }
 
-    document.querySelector('#resultado').innerHTML = resultado;
+   document.querySelector('#resultado').innerHTML = resultado;
 
 });
 
 document.querySelector('#clean').addEventListener('click', function () {
-    document.getElementById('resultado').innerHTML = " ";
+   document.getElementById('resultado').innerHTML = " ";
 });
