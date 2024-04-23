@@ -12,7 +12,10 @@ document.querySelector('#btCalc').addEventListener('click', function () {
     let valorFinal = 0
 
 
-    if (tipoCombustivel === 'Álcool') {
+
+    if ( tipoCombustivel < 0) {
+        window.alert('Insira um valor maior ou igual a 0')
+      if (tipoCombustivel === 'Álcool') {
         if (litros <= 20) {
             valorFinal = litros * (precoAlcool - (precoAlcool * 0.03));
         } else {
@@ -27,7 +30,7 @@ document.querySelector('#btCalc').addEventListener('click', function () {
     };
     if (tipoCombustivel === 'semTexto') {
         window.alert('Insira um tipo de combustivel valido')
-    }
+    }};
 
     document.querySelector('#resultado').innerHTML = '<strong> Total a pagar: R$ </strong>' + valorFinal.toFixed(2)
 });

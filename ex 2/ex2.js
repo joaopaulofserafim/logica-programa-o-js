@@ -9,14 +9,18 @@ document.querySelector('#btV').addEventListener('click', function () {
 
 
 function valorFinal(clientess, atual) {
-    
+
     let valorFinal = atual;
+    if (atual === 'VIP' || 'Funcionario' < 0) {
+        return 'Insira um valor maior que 0';
+    }
     if (clientess === 'VIP') {
         valorFinal -= (atual * 0.05);
     } else if (clientess === 'Funcionario') {
         valorFinal -= (atual * 0.01);
     }
     return `<strong>Valor a pagar R$: ${valorFinal}</strong>`;
+
 };
 
 

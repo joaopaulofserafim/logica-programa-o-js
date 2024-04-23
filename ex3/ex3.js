@@ -7,7 +7,7 @@ document.querySelector('#btVer').addEventListener('click', function () {
 
 
    if (timeA < 0 || timeB < 0) {
-      resultado = '<strong>Adicione um valor maior ou igual a Zero</strong> '
+     window.alert('Adicione um valor maior ou igual a Zero' )
    }else if (timeA === timeB) {
       resultado = ' <strong> O jogo terminou em empate! </strong>'
    } else if (timeA > timeB) {
