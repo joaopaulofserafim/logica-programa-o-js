@@ -1,6 +1,6 @@
 document.querySelector('#btLimp').addEventListener('click', function () {
     document.querySelector('#resultado').innerHTML = " "
-    
+
 
 });
 document.querySelector('#btCalc').addEventListener('click', function () {
@@ -9,29 +9,31 @@ document.querySelector('#btCalc').addEventListener('click', function () {
     const tipoCombustivel = document.querySelector('#tpCombustivel').value;
     const precoAlcool = 2.89;
     const precoGasolina = 5.19;
-    let valorFinal = 0
+    let valorFinal
 
 
 
-    if ( tipoCombustivel < 0) {
-        window.alert('Insira um valor maior ou igual a 0')
-      if (tipoCombustivel === 'Álcool') {
+    if (isNaN(valorFinal) || valorFinal <= 0) {
+        window.alert('Insira um valor válido e maior que 0')
+    }if (tipoCombustivel === 'Álcool') {
         if (litros <= 20) {
             valorFinal = litros * (precoAlcool - (precoAlcool * 0.03));
+            return '<strong> Total a pagar: R$ </strong>' + valorFinal.toFixed(2)
         } else {
             valorFinal = litros * (precoAlcool - (precoAlcool * 0.05));
+            return '<strong> Total a pagar: R$ </strong>' + valorFinal.toFixed(2)
         }
     } else if (tipoCombustivel === 'Gasolina') {
         if (litros <= 20) {
             valorFinal = litros * (precoGasolina - (precoGasolina * 0.04));
+            return '<strong> Total a pagar: R$ </strong>' + valorFinal.toFixed(2)
         } else {
             valorFinal = litros * (precoGasolina - (precoGasolina * 0.06));
+            return '<strong> Total a pagar: R$ </strong>' + valorFinal.toFixed(2)
         }
     };
     if (tipoCombustivel === 'semTexto') {
         window.alert('Insira um tipo de combustivel valido')
-    }};
-
-    document.querySelector('#resultado').innerHTML = '<strong> Total a pagar: R$ </strong>' + valorFinal.toFixed(2)
+    };
 });
 

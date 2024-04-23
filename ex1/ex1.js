@@ -9,13 +9,15 @@ document.querySelector('#clean').addEventListener('click', function () {
     document.querySelector('#resultado').innerHTML = " ";
 });
 
-let resultado;
 
 function TipoTriangulo(ladoA, LadoB, LadoC) {
 
+let resultado;
 let erro;
 
-if (ladoA === LadoB && LadoB === LadoC) {
+if (isNaN(resultado) || resultado < 0) {
+    window.alert ('Insira um valor válido e maior que 0')
+}if (ladoA === LadoB && LadoB === LadoC) {
     return "Equilátero";
 } else if (ladoA === LadoB || ladoA === LadoC || LadoB === LadoC) {
     return "Isósceles";
