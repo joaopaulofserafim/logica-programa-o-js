@@ -1,27 +1,48 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
 }
+
 
 body {
     background-color: rgb(1, 0, 50);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.imagem{
+    background-image: url('C:/Users/user/logica-programa-o-js/posto.png'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 100vh;
+    width: 100vh;
+    grid-area: 1 / 1 / 4 / 4;
+    display: flex;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 h1 {
     text-align: center;
-    margin-top: 20px;
     color: white;
-    margin-bottom: 20px;
+    display: block;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    filter: blur(-5px); 
 }
 
 #conteudo {
+    display: grid;
     color: white;
     border-radius: 10px;
-    background-color: gray;
+    background-color: rgba(81, 81, 81, 0.492);
     padding: 20px;
-    text-align: center;
-
-
+    grid-area: 2 / 2 / 4 / 4;
+    text-align: center; 
+    filter: blur(0.5px); 
+    /* align-items: center; */
 }
 
