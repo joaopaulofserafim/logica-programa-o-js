@@ -3,30 +3,24 @@
     padding: 0;
 }
 
-
 body {
     font-family: 'Arial', sans-serif;
     background-color: #1a1a1a;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4 ,1fr);
     height: 100vh;
-    width: 100vh;
+    display: flex;
+    justify-content: center;
 }
 
 h1 {
     color: #ffcc00;
     position: fixed;
-
 }
 
-form {
+main {
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
-   grid-area: 2 / 2 / 4 /  4;
-
-}  
+}
 
 div {
     margin-bottom: 15px;
