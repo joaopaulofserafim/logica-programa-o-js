@@ -8,29 +8,38 @@
   </head>
 
   <body>
-
-    <div class="imagem">
-      <img src="C:\Users\user\logica-programa-o-js\posto.png" alt="Foto Fundo Posto ">
-    </div>
+    <h1 class="title">Desconto Variável</h1>
     
-    <section id="conteudo">
-      <h1>Descontos</h1>
+    <section class="container">
+    
       <form action="" id="form">
-        <label for="clientess" >  <strong>Desconto de:</strong>  </label>
-        <select name="" id="clientess">
-          <option value="Comum">   <strong>Cliente Comum </strong>  </option>
-          <option value="Funcionario">   <strong>Funcionário</strong>    </option>
-          <option value="VIP">   <strong>Cliente VIP</strong>   </option>
+        <div class="parteUm">
+          <label for="clientess" > <strong> Desconto de:</strong>  </label>
+          <select name="" id="clientess">
+            <option value="Comum">  Cliente Comum   </option>
+            <option value="Funcionario">  Funcionário    </option>
+            <option value="VIP">  Cliente VIP   </option>
+        </div>
         </select>
         <br />
         <br />
         <label for="valor" id="atual">  <strong>Valor:</strong>  </label>
         <input type="number" id="valor" />
-        <button type="button" id="btV"> <strong> Verificar </strong> </button>
-        <button type="reset" id="btClean">  <strong>Limpar</strong>  </button>
-        <div id="valorFinal"></div>
+        <br>
+
+        <div class="botao">
+          <div id="valorFinal"></div>
+          <button type="button" id="btV"> <strong> Verificar </strong> </button>
+          <button type="reset" id="btClean">  <strong>Limpar</strong>  </button>
+        </div>
       </form>
     </section>
+
+    <div>
+      <button type="button" id="btTrocaTema"> 
+        <strong>Trocar Tema</strong>
+      </button>
+    </div>
 
     
 

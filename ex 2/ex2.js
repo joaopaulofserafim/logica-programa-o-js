@@ -18,7 +18,7 @@ function valorFinal(clientess, atual) {
     } else if (clientess === 'Funcionario') {
         valorFinal -= (atual * 0.01);
     }
-    return `<strong>Valor a pagar R$: ${valorFinal}</strong>`;
+    return `<strong>Total R$: ${valorFinal}</strong>`;
     
 
 };
@@ -27,3 +27,14 @@ function valorFinal(clientess, atual) {
 document.querySelector('#btClean').addEventListener('click', function () {
     document.querySelector('#valorFinal').innerHTML = " ";
 })    
+
+
+document.querySelector('#btTrocaTema').addEventListener('click', function() {
+   
+    if (document.documentElement.getAttribute('data-tema') === 'light') {
+        document.documentElement.setAttribute('data-tema', 'dark');
+        
+    } else {
+        document.documentElement.setAttribute('data-tema', 'light');
+    }
+});

@@ -3,6 +3,11 @@ document.querySelector('#btVer').addEventListener('click', function () {
    let timeA = parseInt(document.querySelector('#TimeA').value);
    let timeB = parseInt(document.querySelector('#TimeB').value);
 
+   if (isNaN(timeA)|| isNaN(timeB)){
+      window.alert('Por favor, insira válidos para os placares');
+   }
+   
+
    let resultado = verificarResultado(timeA, timeB)
    document.querySelector('#resultado').innerHTML = resultado
 

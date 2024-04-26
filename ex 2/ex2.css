@@ -1,48 +1,116 @@
 * {
     margin: 0;
     padding: 0;
+}
 
+
+:root {
+    --plano-fundo: #f4f4f4;
+    --cor-do-texto: #007bff;
+    --cor-botao: #007bff;
+    --hover-botao: #0056b3;
+    --texto-botao: #ffffff;
+    --resultado-conta: #000000;
+}
+
+
+[data-tema="light"] {
+    --plano-fundo: #f4f4f4;
+    --cor-do-texto: #007bff;
+    --cor-botao: #007bff;
+    --hover-botao: #0056b3;
+    --texto-botao: #ffffff;
+    --resultado-conta: #000000;
+}
+
+[data-tema="dark"] {
+    --plano-fundo: rgb(1, 2, 35);
+    --cor-do-texto: #f8df24;
+    --cor-botao: #f8df24d8;
+    --texto-botao: #000000;
+    --resultado-conta: #ffffff;
 }
 
 
 body {
-    background-color: rgb(1, 0, 50);
-    height: 100vh;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.imagem{
-    background-image: url('C:/Users/user/logica-programa-o-js/posto.png'); 
-    background-size: cover;
-    background-repeat: no-repeat; 
-    height: 100vh;
-    width: 100vh;
-    grid-area: 1 / 1 / 4 / 4;
+    background-color: var(--plano-fundo);
     display: flex;
-    background-position: center;
-    background-attachment: fixed;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
 }
+
+.title {
+    position: fixed;
+    top: 13%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--cor-do-texto);
+
+}
+
+
+.container {
+    border-radius: 8px;
+}
+
 
 h1 {
-    text-align: center;
-    color: white;
-    display: block;
-    font-size: xx-large;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    filter: blur(-5px); 
+    color: var(--cor-do-texto);
 }
 
-#conteudo {
-    display: grid;
-    color: white;
-    border-radius: 10px;
-    background-color: rgba(81, 81, 81, 0.492);
-    padding: 20px;
-    grid-area: 2 / 2 / 4 / 4;
-    text-align: center; 
-    filter: blur(0.5px); 
-    /* align-items: center; */
+.parteUm {
+    margin-bottom: 15px;
 }
 
+label {
+    color: var(--cor-do-texto);
+}
+
+select,
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 100px;
+    border: 1px solid #cccccc;
+}
+
+/* select > label:last-child {
+    width: 10%;
+} */
+
+/* .botao {
+    /* display: flex; */
+    /* justify-content space-between} */
+
+
+
+
+
+button {
+    padding: 10px 20px;
+   border: none;
+    border-radius: 100px;
+    background-color: var(--cor-botao);
+    color: var(--texto-botao);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 50px;
+    margin-left: 25px;
+
+}
+
+button:hover {
+    background-color: var(--hover-botao);
+}
+
+#valorFinal {
+    color: var(--resultado-conta);
+}
+
+#btTrocaTema {
+    position: fixed;
+}
