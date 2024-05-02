@@ -1,3 +1,14 @@
+document.querySelector("#btCalcIMC").addEventListener("click", function () {
+   const peso = document.querySelector("#peso").value;
+   const altura = document.querySelector("#altura").value;
+   const imc = calculoIMC(peso, altura);
+   document.querySelector("#resultadoIMC").innerHTML = imc;
+});
+document.querySelector("#btLimpar").addEventListener("click", function () {
+   document.querySelector("#resultadoIMC").innerHTML = "";
+});
+
+
 function calculoIMC(peso, altura) {
 
    const imc = peso / (altura ** 2)
