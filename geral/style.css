@@ -1,5 +1,4 @@
-
-   * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +8,7 @@ body {
 
     color: rgb(0, 0, 0);
     min-height: 100vh;
-    background-color: #fffaeee9;
+    background-color: #dbe1ffd1;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -43,7 +42,7 @@ body {
 
 .allHeader {
     display: flex;
-    background: linear-gradient(to right, #8396ff, #4863fc, #1e0eff);
+    background: linear-gradient(to right, #7e91ff, #4863fc, #1808ff);
     height: 65px;
     justify-content: space-between;
 }
@@ -119,7 +118,7 @@ body {
 }
 
 article {
-    background-color: #f0f0f0b0;
+    background-color: #fffaeee9;
     padding: 20px;
     border-radius: 5px;
     height: 10rem;
@@ -160,6 +159,12 @@ p {
     font-size: medium;
 }
 
-#acessoEx{
-    color: #000000;
+button {
+    background-color: #6c82ff;
+    color: white;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    margin-top: 10px;
+    text-align: right;
 }

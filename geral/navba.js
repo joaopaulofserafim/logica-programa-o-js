@@ -1,17 +1,29 @@
+function criaAncora(url, texto) {
+    const ancora = document.createElement('a');
+    ancora.setAttribute('href', url);
+    ancora.innerHTML = texto ;
+    
+    return ancora;
+}
+
+// function criaLista (ancora){
+//     const lista = document.createElement('li')
+//     lista.setAttribute()
+//     lista.innerHTML = 0
+
+//     return lista;
+// }
+
 
 // <a> home 
-const aHome = document.createElement('a');
-aHome.setAttribute('href', '../geral/index.html');
-aHome.innerHTML = 'Home';
+const aHome = criaAncora('/index.html', 'Home')
 
 // <li> do home
 const liHome = document.createElement('li');
 liHome.append(aHome);
 
 // <a> ex1
-const aExercicio1 = document.createElement('a');
-aExercicio1.setAttribute('href', '../ex1/ex1.html');
-aExercicio1.innerHTML = 'Exerc. 1';
+const aExercicio1 = criaAncora('../ex1/ex1.html' , 'Exerc. 1');
 
 // document.body.append(aExercicio1);
 
@@ -20,10 +32,9 @@ const liExercicio1 = document.createElement('li');
 liExercicio1.appendChild(aExercicio1);
 
 
+
 // <a> do exercício 6
-const aExercicio6 = document.createElement('a');
-aExercicio6.setAttribute('href', '../ex6/ex6.html');
-aExercicio6.innerHTML = 'Exerc. 6';
+const aExercicio6 = criaAncora('../ex6/ex6.html' , 'Exerc. 6')
 
 // <li> do exercício 6
 const liExercicio6 = document.createElement('li');
@@ -42,7 +53,6 @@ const spanLogo = document.createElement('span');
 spanLogo.innerHTML = 'Menu & breadcrumbs';
 
 
-
 // <div class="logo">
 const divLogo = document.createElement('div');
 divLogo.classList.add('logo');
@@ -50,10 +60,9 @@ divLogo.appendChild(spanLogo);
 
 
 
-
 const divMenuLogo = document.createElement('div');
 divMenuLogo.classList.add('logo-menu');
-divMenuLogo.appendChild(nav,divLogo);
+divMenuLogo.appendChild(nav, divLogo);
 
 const header = document.createElement('header');
 header.appendChild(divMenuLogo);
