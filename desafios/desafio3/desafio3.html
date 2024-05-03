@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertor de Temperatura</title>
+</head>
+<body>
+    <main>
+    </section>
+    <section class="conversor">
+      <form action="" id="convertorTemp">
+        <h2>Conversor de Temperatura</h2>
+        <label for="valorTemperatura">Temperatura:</label>
+        <input type="number" id="valorTemperatura">
+        <label for="escalaAtual">Escala atual:</label>
+        <select id="escalaAtual">
+          <option value="C" selected>Celsius</option>
+          <option value="F">Fahrenhreit</option>
+          <option value="K">Kelvin</option>
+        </select>
+        <label for="escalaConvertida">Escala Convertida:</label>
+        <select id="escalaConvertida">
+          <option value="C">Celsius</option>
+          <option value="F" selected>Fahrenhreit</option>
+          <option value="K">Kelvin</option>
+        </select>
+
+        <button type="button" id="Convertor">Convertor</button>
+        <button type="reset" id="Limpar">Limpar</button>
+      </form>
+      <div id="resultadoTEM"></div>
+    </section>
+  </div> 
+    </main>
+    <script src="desafio3.js"></script>
+</body>
+</html>

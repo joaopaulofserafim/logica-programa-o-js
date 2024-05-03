@@ -31,7 +31,7 @@ liExercicio6.appendChild(aExercicio6);
 
 // <ul> do menu
 const ulNav = document.createElement('ul');
-ulNav.appendChild(liHome, liExercicio1);
+ulNav.appendChild(liHome, liExercicio1, liExercicio6);
 
 // <nav> do menu
 const nav = document.createElement('nav');
@@ -53,7 +53,7 @@ divLogo.appendChild(spanLogo);
 
 const divMenuLogo = document.createElement('div');
 divMenuLogo.classList.add('logo-menu');
-divMenuLogo.appendChild(nav);
+divMenuLogo.appendChild(nav,divLogo);
 
 const header = document.createElement('header');
 header.appendChild(divMenuLogo);

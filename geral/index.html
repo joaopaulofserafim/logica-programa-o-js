@@ -2,25 +2,24 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="navbar.css">
-    <title>Temperatura</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="navbar.css" >
+    <title>Lista de Exercícios</title>
   </head>
 
   <body>
-
     <header>
-      <div class="logo-menu">
+      <div class="allHeader">
         <div class="logo">
-          <span>Menu & breadcrumbs</span>
+          <span>Lista de Exercícios</span>
         </div>
         <nav class="menu-navegacao">
           <ul>
             <li><a href="/geral/index.html">Home</a></li>
-            <li><a href="/ex1/ex1.html">Exercício </a></li>
-            <li><a href="#">Serviços</a></li>
+            <li><a href="/ex1/ex1.html">Ex 1</a></li>
+            <li><a href="/ex6/ex6.html">Ex 6</a></li>
             <li><a href="#">Contato</a></li>
           </ul>
         </nav>
@@ -36,52 +35,112 @@
       </div>
     </header>
 
-   
-     
+    <div class="gridConteudo">
+      <div class="ex1">
+        <article>
+          <h2>Exercício 1</h2>
+          <p>
+            O programa lê as medidas dos lados de um triângulo e determina sua
+            classificação com base nessas medidas. Se todos os lados têm o mesmo
+            tamanho, o triângulo é classificado como equilátero. Se dois lados
+            têm o mesmo tamanho e o terceiro é diferente, é classificado como
+            isósceles. Por fim, se todos os lados têm tamanhos diferentes, o
+            triângulo é escaleno.
+          </p>
+        </article>
+      </div>
 
-      <!-- </section>
-        <section class="IMC">
-          <h2>Calculadora IMC</h2>
-          <form action="" id="formIMC">
-            <label for="peso">Peso:</label>
-            <input type="number" id="peso" step="0.5" min="0" max="1000" />
-            <label for="altura">Altura:</label>
-            <input type="number" id="altura" step="0.01" min="0" max="3" />
-            <div class="buttonn">
-              <button type="button" id="btCalcIMC">Calcular IMC</button>
-              <button type="reset" id="btLimpar">Limpar</button>
-            </div>
-          </form>
-          <div id="resultadoIMC"></div>
-        </section>
-        <section class="conversor">
-          <form action="" id="convertorTemp">
-            <h2>Conversor de Temperatura</h2>
-            <label for="valorTemperatura">Temperatura:</label>
-            <input type="number" id="valorTemperatura" />
-            <label for="escalaAtual">Escala atual:</label>
-            <select id="escalaAtual">
-              <option value="C" selected>Celsius</option>
-              <option value="F">Fahrenhreit</option>
-              <option value="K">Kelvin</option>
-            </select>
-            <label for="escalaConvertida">Escala Convertida:</label>
-            <select id="escalaConvertida">
-              <option value="C">Celsius</option>
-              <option value="F" selected>Fahrenhreit</option>
-              <option value="K">Kelvin</option>
-            </select>
+      <div class="ex2">
+        <article>
+          <h2>Exercício 2</h2>
+          <p>
+            O programa calcula o valor total a ser pago por uma pessoa após a
+            aplicação de descontos. Ele solicita o valor total da compra e um
+            código que identifica o tipo de cliente: comum (1), funcionário (2)
+            ou VIP (3). Com base no código fornecido, o programa aplica um
+            desconto de 10% para funcionários e 5% para clientes VIPs. A saída
+            do programa exibe o valor total da compra após o processamento e
+            indica a categoria do desconto aplicado, se houver.
+          </p>
+        </article>
+      </div>
 
-            <button type="button" id="Convertor">Convertor</button>
-            <button type="reset" id="Limpar">Limpar</button>
-          </form>
-          <div id="resultadoTEM"></div>
-        </section>
-      </div> -->
-   
+      <div class="ex3">
+        <article>
+          <h2>Exercício 3</h2>
+          <p>
+            O programa desenvolvido recebe como entrada os gols marcados por
+            cada time em um jogo de futebol e determina o resultado final,
+            informando se foi um empate, vitória do primeiro time ou vitória do
+            segundo time. Ele realiza essa verificação comparando os números de
+            gols marcados por cada equipe e exibindo o resultado correspondente
+            com base nessa comparação. Assim, o usuário pode rapidamente saber o
+            desfecho do jogo apenas fornecendo o placar final.
+          </p>
+        </article>
+      </div>
 
-      <script src="desafio2.js"></script>
+      <div class="ex4">
+        <article>
+          <h2>Exercício 4</h2>
+          <p>
+            Um programa desenvolvido para armazenar os nomes de 10 pessoas em um
+            vetor. Após a entrada dos nomes, o programa permite a leitura de
+            mais um nome para efetuar uma busca entre os nomes inseridos
+            anteriormente. Se o nome fornecido estiver presente no vetor, o
+            programa exibe a mensagem "ACHEI". Caso contrário, exibe "NÃO
+            ACHEI". O programa realiza essa verificação por meio de uma busca
+            sequencial dentro do vetor de nomes.
+          </p>
+        </article>
+      </div>
+
+      <div class="ex5">
+        <article>
+          <h2>Exercício 5</h2>
+          <p>
+            O programa lê a quantidade de litros e o tipo de combustível
+            escolhido pelo cliente, sendo Álcool representado pela letra 'A' e
+            Gasolina pela letra 'G'. Com base nesses dados, o programa calcula o
+            valor a ser pago considerando a tabela de descontos fornecida: para
+            o Álcool, aplica-se um desconto de 3% por litro se forem vendidos
+            até 20 litros e 5% por litro se forem vendidos mais de 20 litros;
+            para a Gasolina, os descontos são de 4% por litro para até 20 litros
+            e 6% por litro para mais de 20 litros. O resultado é então impresso,
+            representando o valor final a ser pago pelo cliente.
+          </p>
+        </article>
+      </div>
+
+      <div class="ex6">
+        <article>
+          <h2>Exercício 6</h2>
+          <p>
+            O programa desenvolvido calcula o desconto aplicado à compra de
+            produtos com base na quantidade adquirida e no código do produto
+            inserido pelo usuário.
+          </p>
+        </article>
+      </div>
+
+      <div class="ex7">
+        <article>
+          <h2>Exercício 7</h2>
+          <p>
+            O programa desenvolvido realiza o cálculo de indicadores
+            demográficos, como a taxa de natalidade e a taxa de mortalidade, com
+            base no número de habitantes, nascimentos e óbitos de uma população
+            específica. Ao inserir os dados necessários, como o número total de
+            habitantes, o número de nascimentos e o número de óbitos, o programa
+            calcula automaticamente esses indicadores, fornecendo informações
+            importantes sobre o crescimento e a saúde da população em questão.
+          </p>
+        </article>
+      </div>
+
+    </div>
+
+    <script src="desafio2.js"></script>
     <script src="desafio3.js"></script>
-
   </body>
 </html>
