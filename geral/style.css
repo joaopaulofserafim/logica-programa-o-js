@@ -159,12 +159,16 @@ p {
     font-size: medium;
 }
 
-button {
+/* BOTÃO ARTICLE */
+
+#botaoAcesso {
+    width: 100px;
     background-color: #6c82ff;
     color: white;
     border-radius: 20px;
     padding: 5px;
     border: none;
-    margin-top: 10px;
-    text-align: right;
+    margin-left: 130px;
+    line-height: 50px;
+    display: flex;
 }
