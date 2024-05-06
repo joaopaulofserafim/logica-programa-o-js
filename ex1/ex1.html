@@ -3,40 +3,40 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <!-- <link rel="stylesheet" href="estilo.css" > -->
-    <link rel="stylesheet" href="/geral/style.css">
+    <link rel="stylesheet" href="/ex2.css">
     <link rel="stylesheet" href="/geral/reset.css">
-    <link rel="icon" type="image/x-icon" href="../icons8-reproduzir-64.png" >
     <title>Verificando Triângulos</title>
   </head>
 
   <body>
    
-      <h1 class="h1"><strong>Verificando triângulos</strong></h1>
+      <h1 class="title"><strong>Verificando triângulos</strong></h1>
     
 
-    <section class="all">
-      <form action="" id="form">
-        <h1 class="insira">Insira a medida do triângulo</h1>
-        <label for="LadoA"><strong>Lado A:</strong></label>
-        <input type="number" id="LadoA" placeholder="Medida do triângulo" >
-        <br >
-        <br >
-        <label for="LadoB"><strong>Lado B:</strong></label>
-        <input type="number" id="LadoB" placeholder="Medida do triângulo" >
-        <br>
-        <br >
-        <label for="LadoC"><strong>Lado C:</strong></label>
-        <input type="number" id="LadoC" placeholder="Medida do triângulo" >
-      </form>
-
-      <p id="resultado"></p>
-
-      <div class="btt">
-        <button type="button" id="btVeri"><strong>Classificar</strong></button>
-        <button type="reset" id="clean"><strong>Limpar</strong></button>
-      </div>
-    </section>
+    <main class="container">
+      <section class="all">
+        <form action="" id="form">
+          <div class="conteudo">
+            <h1 class="insira">Insira a medida do triângulo</h1>
+            <label for="LadoA"><strong>Lado A:</strong></label>
+            <input type="number" id="LadoA" placeholder="Medida do triângulo" >
+            <br >
+            <br >
+            <label for="LadoB"><strong>Lado B:</strong></label>
+            <input type="number" id="LadoB" placeholder="Medida do triângulo" >
+            <br>
+            <br>
+            <label for="LadoC"><strong>Lado C:</strong></label>
+            <input type="number" id="LadoC" placeholder="Medida do triângulo" >
+          </div>
+        </form>
+        <p id="resultado"></p>
+        <div class="btt">
+          <button type="button" id="btVeri"><strong>Classificar</strong></button>
+          <button type="reset" id="clean"><strong>Limpar</strong></button>
+        </div>
+      </section>
+    </main>
   </body>
   <script src="ex1.js"></script>
   <script src="/geral/navba.js"></script>

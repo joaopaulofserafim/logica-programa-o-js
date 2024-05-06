@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -39,7 +40,11 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
+    
+}
 
+h1 {
+    color: var(--cor-do-texto);
 }
 
 .title {
@@ -58,11 +63,8 @@ body {
 }
 
 
-h1 {
-    color: var(--cor-do-texto);
-}
 
-.parteUm {
+.conteudo {
     margin-bottom: 15px;
 }
 
@@ -87,12 +89,9 @@ input[type="number"] {
     /* justify-content space-between} */
 
 
-
-
-
 button {
     padding: 10px 20px;
-   border: none;
+    border: none;
     border-radius: 100px;
     background-color: var(--cor-botao);
     color: var(--texto-botao);

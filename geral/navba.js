@@ -1,48 +1,69 @@
+const ancoras = [
+    { "url": "/geral/index.html", "texto": "home" },
+    { "url": "/ex1/ex1.html", "texto": "Exerc 1" },
+    { "url": "/ex1/ex6.html", "texto": "Exerc 6" }
+];
+
+
 function criaAncora(url, texto) {
     const ancora = document.createElement('a');
     ancora.setAttribute('href', url);
-    ancora.innerHTML = texto ;
-    
+    ancora.innerHTML = texto;
+
     return ancora;
 }
 
-// function criaLista (ancora){
-//     const lista = document.createElement('li')
-//     lista.setAttribute()
-//     lista.innerHTML = 0
-
-//     return lista;
-// }
+function criaLista(ancora) {
+    const lista = document.createElement('li')
+    lista.appendChild(ancora)
 
 
-// <a> home 
-const aHome = criaAncora('/index.html', 'Home')
+    return lista;
+}
 
-// <li> do home
-const liHome = document.createElement('li');
-liHome.append(aHome);
+function criaUlNav(ancoras) {
 
-// <a> ex1
-const aExercicio1 = criaAncora('../ex1/ex1.html' , 'Exerc. 1');
+    const ul = document.createElement('ul');
 
-// document.body.append(aExercicio1);
-
-// <li> do exercício 1
-const liExercicio1 = document.createElement('li');
-liExercicio1.appendChild(aExercicio1);
+    ancoras.forEach(function (ancora) {
+        const a = criaAncora(ancora.url, ancora.texto);
+        const li = criaLista(a);
+        ul.appendChild(li);
+    })
+    return ul
+};
 
 
 
-// <a> do exercício 6
-const aExercicio6 = criaAncora('../ex6/ex6.html' , 'Exerc. 6')
 
-// <li> do exercício 6
-const liExercicio6 = document.createElement('li');
-liExercicio6.appendChild(aExercicio6);
+// // <a> home 
+// const aHome = criaAncora('/index.html', 'Home')
 
-// <ul> do menu
-const ulNav = document.createElement('ul');
-ulNav.appendChild(liHome, liExercicio1, liExercicio6);
+// // <li> do home
+// const liHome = document.createElement('li');
+// liHome.append(aHome);
+
+// // <a> ex1
+// const aExercicio1 = criaAncora('../ex1/ex1.html', 'Exerc. 1');
+
+// // document.body.append(aExercicio1);
+
+// // <li> do exercício 1
+// const liExercicio1 = document.createElement('li');
+// liExercicio1.appendChild(aExercicio1);
+
+
+
+// // <a> do exercício 6
+// const aExercicio6 = criaAncora('../ex6/ex6.html', 'Exerc. 6')
+
+// // <li> do exercício 6
+// const liExercicio6 = document.createElement('li');
+// liExercicio6.appendChild(aExercicio6);
+
+// // <ul> do menu
+// const ulNav = document.createElement('ul');
+// ulNav.appendChild(liHome, liExercicio1, liExercicio6);
 
 // <nav> do menu
 const nav = document.createElement('nav');

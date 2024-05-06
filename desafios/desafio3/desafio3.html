@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/ex2.css">
     <title>Convertor de Temperatura</title>
 </head>
 <body>
@@ -13,18 +14,23 @@
         <h2>Conversor de Temperatura</h2>
         <label for="valorTemperatura">Temperatura:</label>
         <input type="number" id="valorTemperatura">
+
         <label for="escalaAtual">Escala atual:</label>
-        <select id="escalaAtual">
-          <option value="C" selected>Celsius</option>
+        <input list="escala" id="escalaAtual" value="F">
+        <datalist id="escala">
+          <option value="C" >Celsius</option>
           <option value="F">Fahrenhreit</option>
           <option value="K">Kelvin</option>
-        </select>
+        </datalist>
+
+        
         <label for="escalaConvertida">Escala Convertida:</label>
-        <select id="escalaConvertida">
+        <input list="escala" id="escalaConvertida" value="F">
+        <datalist id="escala">
           <option value="C">Celsius</option>
-          <option value="F" selected>Fahrenhreit</option>
+          <option value="F" >Fahrenhreit</option>
           <option value="K">Kelvin</option>
-        </select>
+        </datalist>
 
         <button type="button" id="Convertor">Convertor</button>
         <button type="reset" id="Limpar">Limpar</button>
