@@ -1,0 +1,76 @@
+/* MOBILE */
+@media screen and (max-width: 480px) {
+
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .title {
+        width: 100%;
+        font-size: xx-large;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    section {
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #input {
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    #clientess {
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    #atual {
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    #valor {
+        font-size: medium;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .botao {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #btV {
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    #btClean {
+        font-weight: bold;
+        font-size: medium;
+    }
+
+    #btTrocaTema {
+        position: absolute;
+        bottom: 0;
+
+    }
+
+
+
+
+}
+
+/* TABLET */
+@media screen and (max-width: 768px) {}
+
+/* TVS */
+@media screen and (min-width: 1921px) {}
