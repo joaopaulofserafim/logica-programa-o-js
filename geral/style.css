@@ -18,6 +18,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
+    list-style: none;
 }
 
 
@@ -31,6 +32,7 @@ body {
     font-family: 'Ubuntu', sans-serif;
     font-size: 1.2rem;
     padding: 0 1rem;
+    text-decoration: none;
 }
 
 .menu-navegacao a:hover {
@@ -124,6 +126,7 @@ p {
     margin-left: 50px;
     line-height: 70px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 #botaoAcesso:hover{

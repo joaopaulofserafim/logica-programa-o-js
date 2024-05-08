@@ -34,7 +34,7 @@ function criaUlNav(ancoras) {
 };
 
 
-
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 // // // <a> home 
 // // const aHome = criaAncora('/index.html', 'Home')
@@ -66,35 +66,40 @@ function criaUlNav(ancoras) {
 // // ulNav.appendChild(liHome, liExercicio1, liExercicio6);
 
 // <nav> do menu
-const nav = document.createElement('nav');
-nav.classList.add('menu-navegacao');
-nav.appendChild(criaUlNav(ancoras));
 
-const spanLogo = document.createElement('span');
-spanLogo.innerHTML = 'Menu & breadcrumbs';
-
-
-// <div class="logo">
-const divLogo = document.createElement('div');
-divLogo.classList.add('logo');
-divLogo.appendChild(spanLogo);
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 
 
-const divMenuLogo = document.createElement('div');
-divMenuLogo.classList.add('logo-menu');
-divMenuLogo.appendChild(nav, divLogo);
+// const nav = document.createElement('nav');
+// nav.classList.add('menu-navegacao');
+// nav.appendChild(criaUlNav(ancoras));
 
-const header = document.createElement('header');
-header.appendChild(divMenuLogo);
-
-
-document.body.insertAdjacentElement('afterbegin', header);
+// const spanLogo = document.createElement('span');
+// spanLogo.innerHTML = 'Menu & breadcrumbs';
 
 
-const linkNavbar = document.createElement('link')
-linkNavbar.setAttribute('rel', 'stylesheet');
-linkNavbar.setAttribute('href', '../geral/navbar.css');
+// // <div class="logo">
+// const divLogo = document.createElement('div');
+// divLogo.classList.add('logo');
+// divLogo.appendChild(spanLogo);
 
-document.querySelector('[href="/css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar)
+
+
+// const divMenuLogo = document.createElement('div');
+// divMenuLogo.classList.add('logo-menu');
+// divMenuLogo.appendChild(nav, divLogo);
+
+// const header = document.createElement('header');
+// header.appendChild(divMenuLogo);
+
+
+// document.body.insertAdjacentElement('afterbegin', header);
+
+
+// const linkNavbar = document.createElement('link')
+// linkNavbar.setAttribute('rel', 'stylesheet');
+// linkNavbar.setAttribute('href', '../geral/navbar.css');
+
+// document.querySelector('[href="/css/responsividade.css"]').insertAdjacentElement('beforebegin', linkNavbar)
 
