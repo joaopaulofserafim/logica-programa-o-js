@@ -33,91 +33,67 @@
 }
 
 
+/* EXÉRCIO 1 */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: var(--plano-fundo);
-}
-
-section {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    color: var(--cor-do-texto);
-}
-
-.title {
-    position: fixed;
-    top: 13%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  }
+  
+  .container {
+    margin: 50px auto;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+  }
+  
+  .title {
     text-align: center;
     color: var(--cor-do-texto);
-
-}
-
-
-.container {
-    border-radius: 8px;
-}
-
-
-
-.conteudo {
-    margin-bottom: 15px;
-}
-
-label {
+  }
+  
+  .conteudo {
+    margin-top: 20px;
+  }
+  
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
     color: var(--cor-do-texto);
-}
-
-select,
-input[type="number"] {
+  }
+  
+  input {
     width: 100%;
-    padding: 10px;
-    border-radius: 100px;
-    border: 1px solid #cccccc;
-}
+    padding: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 40px;
+    box-sizing: border-box;
+  }
 
-/* select > label:last-child {
-    width: 10%;
-} */
-
-/* .botao {
-    /* display: flex; */
-    /* justify-content space-between} */
-
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 100px;
+  input:hover{
+    border: 1px solid blue;
+  }
+  
+  .btt {
+    margin-top: 20px;
+  }
+  
+  button {
     background-color: var(--cor-botao);
     color: var(--texto-botao);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
-
-}
-
-.botao{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 10px;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: var(--hover-botao);
-}
-
-#valorFinal {
+  }
+  
+  #valorFinal {
+    margin-top: 20px;
     color: var(--resultado-conta);
-}
-
-#btTrocaTema {
-    position: fixed;
-}
+  }
+  
