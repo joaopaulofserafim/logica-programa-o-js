@@ -1,6 +1,6 @@
 document.querySelector('#btCalcu').addEventListener('click', function () {
    let resultado = calcularIndicador();
-   document.querySelector('#resultado').innerHTML = resultado;
+   document.querySelector('#valorFinal').innerHTML = resultado;
  });
 
  
@@ -23,7 +23,7 @@ document.querySelector('#btCalcu').addEventListener('click', function () {
     return resultado;
   }
   document.querySelector('#Clean').addEventListener('click', function () {
-    document.querySelector('#resultado').innerHTML = " ";
+    document.querySelector('#valorFinal').innerHTML = " ";
   });
 
   document.querySelector('#btTrocaTema').addEventListener('click', function() {
@@ -34,4 +34,14 @@ document.querySelector('#btCalcu').addEventListener('click', function () {
     } else {
         document.documentElement.setAttribute('data-tema', 'light');
     }
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const menuIcon = document.getElementById('menu-icon');
+  const menu = document.getElementById('menu');
+
+  menuIcon.addEventListener('click', function() {
+      menu.classList.toggle('active');
+  });
 });

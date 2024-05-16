@@ -1,40 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/ex2.css">
-    <link rel="stylesheet" href="/geral/reset.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/geral/reset.css" >
+    <link rel="stylesheet" href="/css/geral.css" >
     <title>Produtos com desconto</title>
-</head>
-<body>
-<main>
-    <h1>Produtos com desconto</h1>
+  </head>
 
-    <form action="">
+  <body>
+    <header>
+        <div class="menu-icon" id="menu-icon">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <nav class="menu" id="menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/ex1/ex1.html">Exercício 1 </a></li>
+            <li><a href="/ex 2/ex2.html">Exercício 2</a></li>
+            <li><a href="/ex3/ex3.html">Exercício 3</a></li>
+            <li><a href="/ex4/ex4.html">Exercício 4</a></li>
+            <li><a href="/ex5/ex5.html">Exercício 5</a></li>
+            <li><a href="/ex 7/ex7.html">Exercício 7</a></li>
+          </ul>
+        </nav>
+      </header>
 
-        <div class="controle-form">
-            <label for="codigoProduto">Código do produto:</label>
-            <input type="text" id="codigoProduto" required autofocus> 
+    <main class="container">
+      <h1 class="title">Produtos com desconto</h1>
+
+      <form action="">
+        <div class="conteudo">
+          <label for="codigoProduto"><strong>Código do produto:</strong></label>
+          <input type="text" id="codigoProduto" required autofocus />
         </div>
 
-        <div class="controle-form">
-            <label for="qtdeProduto">Quantidade:</label>
-            <input type="text" id="qtdeProduto" required>
+        <div class="conteudo">
+          <label for="qtdeProduto"><strong>Quantidade:</strong></label>
+          <input type="text" id="qtdeProduto" required />
         </div>
 
-        <div class="botoes">
-            <button type="button" class="acao-positiva" id="btCalcular">Calcular</button>
-            <button type="reset" class="acao-negativa" id="btClean">Limpar</button>
+        <div class="btt">
+          <button type="button" class="acao-positiva" id="btCalcular"><strong>Calcular</strong></button>
+          <button type="reset" class="acao-negativa" id="btClean"><strong> Limpar</strong></button>
         </div>
 
         <div id="resultado"></div>
-    </form>
-</main>
+      </form>
+    </main>
 
-
-    
-<script src="ex6.js"></script>
-<script src="/geral/navba.js"></script>
-</body>
+    <script src="ex6.js"></script>
+    <script src="/geral/navba.js"></script>
+  </body>
 </html>

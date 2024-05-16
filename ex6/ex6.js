@@ -70,4 +70,16 @@ function calculaDesconto(codigoProduto, qtdeProduto) {
 
 document.querySelector('#btClean').addEventListener('click', function () {
     document.querySelector('#resultado').innerHTML = " "
-})
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
+});

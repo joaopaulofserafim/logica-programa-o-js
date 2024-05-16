@@ -1,33 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/geral/reset.css">
-    <link rel="stylesheet" href="/ex2.css">
+    <link rel="stylesheet" href="/css/geral.css">
     <title>Jogo de Futebol</title>
-  </head>
+</head>
 
-  <body>
-    <h1><strong>Jogo de Futebol</strong></h1>
+<body>
+    <header>
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <nav class="menu" id="menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/ex1/ex1.html">Exercício 1 </a></li>
+          <li><a href="/ex 2/ex2.html">Exercício 2</a></li>
+          <li><a href="/ex4/ex4.html">Exercício 4</a></li>
+          <li><a href="/ex5/ex5.html">Exercício 5</a></li>
+          <li><a href="/ex6/ex6.html">Exercício 6</a></li>
+          <li><a href="/ex 7/ex7.html">Exercício 7</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <h1 class="title"> Jogo de Futebol</h1>
 
     <main>
-      <form action="">
-        <div>
-          <label for="TimeA">Time A:</label>
-          <input type="number" id="TimeA" min="0" >
-        </div>
-        <div>
-          <label for="TimeB">Time B:</label>
-          <input type="number" id="TimeB" min="0" >
-        </div>
+        <div class="container">
+            <form action="">
+                <div class="conteudo">
+                    <label for="TimeA">Time A:</label>
+                    <input type="number" id="TimeA" min="0">
+                </div>
+                <div class="conteudo">
+                    <label for="TimeB">Time B:</label>
+                    <input type="number" id="TimeB" min="0">
+                </div>
+              </form>
+                
+              <div id="valorFinal"></div>
 
-        <button type="button" id="btVer">Placar Final</button>
-        <button type="reset" id="clean">Resetar</button>
-      </form>
-      <p id="resultado"></p>
+                <div class="btt">
+                    <button type="button" id="btVer">Placar Final</button>
+                    <button type="reset" id="clean">Resetar</button>
+                </div>
+          </div>
+          
+        <button type="button" id="btTrocaTema"><strong>Trocar Tema</strong></button>
     </main>
 
     <script src="ex3.js"></script>
-  </body>
+</body>
 </html>

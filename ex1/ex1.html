@@ -1,49 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-BR	">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="/css/geral.css" >
-    <link rel="stylesheet" href="/geral/reset.css" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/geral.css" />
+    <link rel="stylesheet" href="/geral/reset.css" />
     <title>Verificando Triângulos</title>
   </head>
 
   <body>
-    
-    <main >
-      
+    <header>
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/ex 2/ex2.html">Exercício 2 </a></li>
+          <li><a href="/ex3/ex3.html">Exercício 3</a></li>
+          <li><a href="/ex4/ex4.html">Exercício 4</a></li>
+          <li><a href="/ex5/ex5.html">Exercício 5</a></li>
+          <li><a href="/ex6/ex6.html">Exercício 6</a></li>
+          <li><a href="/ex 7/ex7.html">Exercício 7</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
       <h1 class="title"><strong>Verificando triângulos</strong></h1>
       <section class="container">
-        
         <form action="" id="form">
-
           <div class="conteudo">
-  
-
             <label for="LadoA"><strong>Lado A:</strong></label>
-            <input type="number" id="LadoA" placeholder="Insira a medida do triângulo" >
-            
-           
+            <input
+              type="number"
+              id="LadoA"
+              placeholder="Insira a medida do triângulo"
+            />
+
             <label for="LadoB"><strong>Lado B:</strong></label>
-            <input type="number" id="LadoB" placeholder="Insira a medida do triângulo" >
+            <input
+              type="number"
+              id="LadoB"
+              placeholder="Insira a medida do triângulo"
+            />
 
             <label for="LadoC"><strong>Lado C:</strong></label>
-            <input type="number" id="LadoC" placeholder="Insira a medida do triângulo" >
+            <input
+              type="number"
+              id="LadoC"
+              placeholder="Insira a medida do triângulo"
+            />
           </div>
-
         </form>
 
-        <div id="valorFinal">p</div>
+        <div id="valorFinal"></div>
 
         <div class="btt">
           <button type="button" id="btV"><strong>Classificar</strong></button>
           <button type="reset" id="btClean"><strong>Limpar</strong></button>
         </div>
-
       </section>
 
+      <div>
+        <button type="button" id="btTrocaTema">
+          <strong>Trocar Tema</strong>
+        </button>
+      </div>
     </main>
-
   </body>
   <script src="/ex1/ex1.js"></script>
   <script src="/geral/navba.js"></script>

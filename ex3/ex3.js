@@ -9,7 +9,7 @@ document.querySelector('#btVer').addEventListener('click', function () {
    
 
    let resultado = verificarResultado(timeA, timeB)
-   document.querySelector('#resultado').innerHTML = resultado
+   document.querySelector('#valorFinal').innerHTML = resultado
 
 
    function verificarResultado(timeA, timeB){
@@ -28,5 +28,15 @@ document.querySelector('#btVer').addEventListener('click', function () {
 });
 
 document.querySelector('#clean').addEventListener('click', function () {
-   document.getElementById('resultado').innerHTML = " ";
+   document.querySelector('#valorFinal').innerHTML = " ";
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+   const menuIcon = document.getElementById('menu-icon');
+   const menu = document.getElementById('menu');
+
+   menuIcon.addEventListener('click', function() {
+       menu.classList.toggle('active');
+   });
 });

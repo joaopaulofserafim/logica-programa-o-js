@@ -1,99 +1,346 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 :root {
-    --plano-fundo: #f4f4f4;
-    --cor-do-texto: #007bff;
-    --cor-botao: #007bff;
-    --hover-botao: #0056b3;
-    --texto-botao: #ffffff;
-    --resultado-conta: #000000;
+  --plano-fundo: #f4f4f4;
+  --cor-do-texto: #007bff;
+  --cor-botao: #007bff;
+  --hover-botao: #0056b3;
+  --texto-botao: #ffffff;
+  --resultado-conta: #000000;
 }
 
 
 [data-tema="light"] {
-    --plano-fundo: #f4f4f4;
-    --cor-do-texto: #007bff;
-    --cor-botao: #007bff;
-    --hover-botao: #0056b3;
-    --texto-botao: #ffffff;
-    --resultado-conta: #000000;
+  --plano-fundo: #f4f4f4;
+  --cor-do-texto: #007bff;
+  --cor-botao: #007bff;
+  --hover-botao: #0056b3;
+  --texto-botao: #ffffff;
+  --resultado-conta: #000000;
 }
 
 [data-tema="dark"] {
-    --plano-fundo: rgb(1, 2, 35);
-    --cor-do-texto: #f8df24;
-    --cor-botao: #f8df24d8;
-    --texto-botao: #000000;
-    --resultado-conta: #ffffff;
+  --plano-fundo: rgb(1, 2, 35);
+  --cor-do-texto: #f8df24;
+  --cor-botao: #f8df24d8;
+  --texto-botao: #000000;
+  --resultado-conta: #ffffff;
 }
 
 
-/* EXÉRCIO 1 */
-body {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: var(--plano-fundo);
-  }
-  
-  .container {
-    margin: 50px auto;
-    border-radius: 8px;
-    padding: 20px;
-    max-width: 400px;
-  }
-  
-  .title {
-    text-align: center;
-    color: var(--cor-do-texto);
-  }
-  
-  .conteudo {
-    margin-top: 20px;
-  }
-  
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--cor-do-texto);
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ffffff;
-    border-radius: 40px;
-    box-sizing: border-box;
-  }
+/* MENU HAMBURGUER  */
 
-  input:hover{
-    border: 1px solid blue;
-  }
-  
-  .btt {
-    margin-top: 20px;
-  }
-  
-  button {
-    background-color: var(--cor-botao);
-    color: var(--texto-botao);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: var(--hover-botao);
-  }
-  
-  #valorFinal {
-    margin-top: 20px;
-    color: var(--resultado-conta);
-  }
-  
+.menu-icon {
+  cursor: pointer;
+  width: 3%;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+
+.menu-icon .bar {
+  height: 4px;
+  width: 80%;
+  background-color: var(--cor-botao);
+  border-radius: 20px;
+  margin: 4px 20px;
+}
+
+.menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--plano-fundo);
+  position: absolute;
+  top: 100px;
+}
+
+.menu li {
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu li:hover {
+  background-color: #c5c5c529;
+}
+
+.menu li a {
+  text-decoration: none;
+  color:var(--cor-botao);
+  padding: 15px;
+  display: block;
+}
+
+.menu.active {
+  display: flex;
+}
+
+/*           */
+
+/* EXÉRCIO 1 / CORPO*/
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: var(--plano-fundo);
+}
+header{
+  display: flex;
+}
+
+.container {
+  margin: 50px auto;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+}
+
+.title {
+  text-align: center;
+  color: var(--cor-do-texto);
+}
+
+.conteudo {
+  margin-top: 20px;
+}
+
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--cor-do-texto);
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  box-sizing: border-box;
+}
+
+input:hover {
+  border: 1px solid blue;
+}
+
+.btt {
+  margin-top: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+button {
+  background-color: var(--cor-botao);
+  color: var(--texto-botao);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--hover-botao);
+}
+
+#valorFinal {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: var(--resultado-conta);
+  text-align: center;
+}
+
+/*             */
+
+/* ESTILIZAÇÃO SELECT / INPUT */
+
+/* EXECERCÍCO 1 */
+
+#LadoA:focus,
+#LadoB:focus,
+#LadoC:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+
+
+/* EXERCÍCIO 2 */
+.conteudo select {
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--cor-do-texto);
+  border-radius: 40px;
+  margin-bottom: 10px;
+  background-color: var(--plano-fundo);
+  color: var(--resultado-conta);
+}
+
+.conteudo select:focus {
+  outline: none;
+  /*RETIRA A BORDA PADRÃO AO SELECINAR O INPUT */
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+.valorInput:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+
+/* EXERCÍCIO 3 */
+#TimeA:focus,
+#TimeB:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+
+/* EXERCÍCO 4 */
+#nome:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+
+/* EXERCÍCIO 5 */
+
+.titleEx5 {
+  text-align: center;
+  color: var(--cor-do-texto);
+  height: 10px;
+}
+
+
+.containerEx5 {
+  margin: 50px auto;
+  border-radius: 8px;
+  max-width: 400px;
+}
+
+.bttEx5 {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#litrosLabel {
+  margin-top: 5%;
+}
+
+#litros:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+#tpCombustivel {
+  cursor: pointer;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--cor-do-texto);
+  border-radius: 40px;
+  margin-bottom: 10px;
+  background-color: var(--plano-fundo);
+  color: var(--resultado-conta);
+}
+
+#tpCombustivel:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid var(--cor-do-texto);
+  color: var(--resultado-conta);
+}
+
+th {
+  background-color: var(--cor-botao);
+  color: var(--texto-botao);
+  font-weight: bold;
+}
+
+td {
+  background-color: var(--plano-fundo);
+}
+
+#valorFinalEx5{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  color: var(--resultado-conta);
+  text-align: center;
+}
+
+
+
+/* EXERCÍCIO 6  */
+
+#codigoProduto:focus{
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+#qtdeProduto:focus{
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+
+
+/* EXERCÍCIO 7  */
+
+#habitantes:focus{
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+#obitos:focus{
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+#nascimentos:focus{
+  outline: none;
+  box-shadow: 0 0 8px var(--cor-botao);
+}
+
+
+.bttEx7{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* ESTILIZAÇÃO btTrocaTema  */
+
+
+#btTrocaTema {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--cor-botao);
+  color: var(--texto-botao);
+  padding: 10px 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btTrocaTema:hover {
+  background-color: var(--hover-botao);
+  /* Mudança de cor ao passar o mouse */
+}
+
+/*        */
+
+
+
+
+

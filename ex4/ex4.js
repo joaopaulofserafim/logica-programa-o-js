@@ -27,8 +27,17 @@ document.querySelector('#btPesquisar').addEventListener('click', function () {
     const nomeBuscado = document.querySelector('#nome').value.toUpperCase();
 
     if (nomes.includes(nomeBuscado)) {
-        document.querySelector('#resultado').innerHTML = 'ACHEI ';
+        document.querySelector('#valorFinal').innerHTML = '<strong>Nome existente</strong>';
     } else {
-        document.querySelector('#resultado').innerHTML = 'NÃO ACHEI'
+        document.querySelector('#valorFinal').innerHTML = '<strong>Nome inexistente</strong>'
     }
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const menu = document.getElementById('menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('active');
+    });
 });

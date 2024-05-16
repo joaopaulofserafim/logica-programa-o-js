@@ -3,12 +3,30 @@
   <head>
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-   <link rel="stylesheet" href="/ex2.css">
+   <link rel="stylesheet" href="/css/geral.css">
     <link rel="stylesheet" href="/geral/reset.css">
     <title>Taxa de Natalidade e Mortalidade</title>
   </head>
 
   <body>
+    <header>
+      <div class="menu-icon" id="menu-icon">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <nav class="menu" id="menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/ex1/ex1.html">Exercício 1 </a></li>
+          <li><a href="/ex 2/ex2.html">Exercício 2</a></li>
+          <li><a href="/ex3/ex3.html">Exercício 3</a></li>
+          <li><a href="/ex4/ex4.html">Exercício 4</a></li>
+          <li><a href="/ex5/ex5.html">Exercício 5</a></li>
+          <li><a href="/ex6/ex6.html">Exercício 6</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1 class="title">Taxa de Natalidade e Mortalidade</h1>
 
     <main class="container">
@@ -21,27 +39,34 @@
             <label for="habitantes"><strong>Habitantes:</strong></label>
             <input type="number" id="habitantes" >
           </div>
+
           <div class="obitos">
             <label for="obitos"><strong>Óbitos:</strong></label>
             <input type="number" id="obitos" >
           </div>
+
           <div class="nascimentos">
             <label for="nascimentos"><strong>Nascimentos:</strong></label>
-            <input type="number" id="nascimentos" > <br >
-            <br >
-          </div>
+            <input type="number" id="nascimentos" >
+
           <div class="opcoes">
+
             <label for="opcoes"><strong>Escolha uma opção:</strong></label>
             <select name="" id="opcoes">
               <option value="M">Taxa de Mortalidade</option>
               <option value="N">Taxa de Natalidade</option>
             </select>
+
           </div>
-          <div id="resultado"></div>
+
+          <div id="valorFinal"></div>
+
         </section>
 
-        <button type="button" id="btCalcu">Calcular</button>
-        <button type="reset" id="Clean">Limpar</button>
+        <div class="bttEx7">
+          <button type="button" id="btCalcu"><strong>Calcular</strong></button>
+          <button type="reset" id="Clean"><strong>Limpar</strong></button>
+        </div>
       </form>
 
       <div>

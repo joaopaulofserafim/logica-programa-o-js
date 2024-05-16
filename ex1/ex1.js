@@ -6,27 +6,36 @@ document.querySelector('#btV').addEventListener('click', function () {
     document.querySelector('#valorFinal').innerHTML = resultado;
 });
 document.querySelector('#btClean').addEventListener('click', function () {
-    document.querySelector('#valorFinal').innerHTML = " ";
+    document.querySelector('#valorFinal').innerHTML = "";
 });
 
 
-function TipoTriangulo(ladoA, LadoB, LadoC) {
-
-let resultado;
-let erro;
-
-// if (isNaN(resultado) || resultado <= 0) {
-//     window.alert ('Insira um valor válido e maior que 0')
-
- if (ladoA === LadoB && LadoB === LadoC) {
-    return "Equilátero";
-} else if (ladoA === LadoB || ladoA === LadoC || LadoB === LadoC) {
-    return "Isósceles";
-} else if (ladoA !== LadoB && ladoA !== LadoC && LadoB !== LadoC) {
-    return "Escaleno";
-} else {
-    return erro = "Essas medidas não são validas";
-}
+function TipoTriangulo(ladoA, ladoB, ladoC) {
+    if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC) || ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
+        return 'Insira um valor válido e maior que 0 para todos os lados.';
+    }
+    if (ladoA + ladoB <= ladoC || ladoA + ladoC <= ladoB || ladoB + ladoC <= ladoA) {
+        return 'Essas medidas não formam um triângulo válido.';
+    }
+    if (ladoA === ladoB && ladoB === ladoC) {
+        return "Equilátero";
+    } else if (ladoA === ladoB || ladoA === ladoC || ladoB === ladoC) {
+        return "Isósceles";
+    } else {
+        return "Escaleno";
+    }
 }
 
 
+
+
+    //   MENU HAMBURGUER
+document.addEventListener('DOMContentLoaded', function() { /*'DOMContentLoaded'  UTILIZADO PARA GARANTIR QUE O HTML SEJA LIDO COMPLETAMENTO ANTES DE EXECUTAR O JS */
+    const menuIcon = document.querySelector('#menu-icon');
+    const menu = document.querySelector('#menu');
+
+    menuIcon.addEventListener('click', function() {
+        menu.classList.toggle('active'); /* "TOGGLE"  usada para alternar entre duas classes ou estados de um elemento HTML. */
+    });
+});
+  // 
