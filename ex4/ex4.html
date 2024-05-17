@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="stylesheet" href="/geral/reset.css" >
-    <link rel="stylesheet" href="/css/geral.css" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/geral/reset.css" />
+    <link rel="stylesheet" href="/css/geral.css" />
     <title>Document</title>
   </head>
 
   <body>
     <header>
-
       <div class="menu-icon" id="menu-icon">
         <div class="bar"></div>
         <div class="bar"></div>
@@ -18,7 +17,6 @@
       </div>
 
       <nav class="menu" id="menu">
-
         <ul>
           <li><a href="/index.html">Home</a></li>
           <li><a href="/ex1/ex1.html">Exercício 1 </a></li>
@@ -29,32 +27,37 @@
           <li><a href="/ex 7/ex7.html">Exercício 7</a></li>
         </ul>
       </nav>
-
     </header>
 
-    <h1 class="title">Buscando Nomes</h1>
+    <main>
 
-    <div class="container">
+      <h1 class="title">Buscando Nomes</h1>
 
-      <form action="">
+      <div class="container">
+        <form action="">
 
-        <div class="conteudo">
+          <div class="conteudo">
+            <label for="nome"><strong>Nome para incluir:</strong></label>
+            <input type="text" id="nome" />
 
-          <label for="nome"><strong>Nome para incluir:</strong></label>
-          <input type="text" id="nome" >
+            <div id="valorFinal"></div>
 
-          <div id="valorFinal"></div>
+            <div class="btt">
+              <button type="reset" id="btCadastrar"><strong>Cadastrar</strong></button>
+              <button type="button" id="btPesquisar" class="oculto"><strong>Pesquisar</strong></button>
+            </div>
 
-          <div class="btt">
-            <button type="reset" id="btCadastrar"><strong>Cadastrar</strong></button>
-            <button type="button" id="btPesquisar" class="oculto"><strong>Pesquisar</strong></button>
           </div>
 
-        </div>
+        </form>
 
-      </form>
-      
-    </div>
+      </div>
+
+      <div>
+        <button type="button" id="btTrocaTema"><strong>Trocar Tema</strong></button>
+      </div>
+
+    </main>
 
     <script src="ex4.js"></script>
   </body>

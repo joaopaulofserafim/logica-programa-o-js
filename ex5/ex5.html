@@ -34,54 +34,54 @@
 
       </header>
 
-    <h1 class="titleEx5">Posto de Combustível  </h1>
-
-    <div class="containerEx5">
-      <div class="table">
-          <table class="tabela-posto">
-            <thead>
-              <tr>
-                <th>Álcool <strong> Até: R$ 2,89</strong></th>
-                <th>Gasolina <strong> Até: R$ 5,19</strong></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Até 20 litros, 3% de desconto por litro</td>
-                <td>Até 20 litros, 4% de desconto por litro</td>
-              </tr>
-              <tr>
-                <td>Mais de 20 litros, 5% de desconto por litro</td>
-                <td>Mais de 20 litros, 6% de desconto por litro</td>
-              </tr>
-            </tbody>
-          </table>
+    <main>
+      <h1 class="titleEx5">Posto de Combustível  </h1>
+      <div class="containerEx5">
+        <div class="table">
+            <table class="tabela-posto">
+              <thead>
+                <tr>
+                  <th>Álcool <strong> Até: R$ 2,89</strong></th>
+                  <th>Gasolina <strong> Até: R$ 5,19</strong></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Até 20 litros, 3% de desconto por litro</td>
+                  <td>Até 20 litros, 4% de desconto por litro</td>
+                </tr>
+                <tr>
+                  <td>Mais de 20 litros, 5% de desconto por litro</td>
+                  <td>Mais de 20 litros, 6% de desconto por litro</td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
+        <form action="" id="pG">
+          <div id="btsInserir">
+            <label for="litros" id="litrosLabel"><strong>Quantidade de litros:</strong></label>
+            <input type="number" min="1" id="litros" />
+            <label for="tpCombustivel"><strong>Tipo de Combustivel:</strong></label>
+            <select name="" id="tpCombustivel">
+              <option value="Álcool">Álcool</option>
+              <option value="Gasolina">Gasolina</option>
+            </select>
+          </div>
+      
+                <div id="valorFinalEx5"></div>
+      
+          <div class="bttEx5">
+            <button type="button" id="btCalc"><strong>Calcular</strong></button>
+            <button type="reset" id="btLimp"><strong>Limpar</strong></button>
+          </div>
+        </form>
       </div>
 
-      <form action="" id="pG">
-
-        <div id="btsInserir">
-
-          <label for="litros" id="litrosLabel"><strong>Quantidade de litros:</strong></label>
-          <input type="number" min="1" id="litros" />
-
-          <label for="tpCombustivel"><strong>Tipo de Combustivel:</strong></label>
-          <select name="" id="tpCombustivel">
-            <option value="Álcool">Álcool</option>
-            <option value="Gasolina">Gasolina</option>
-          </select>
-
-        </div>
-        
-              <div id="valorFinalEx5"></div>
-    
-        <div class="bttEx5">
-          <button type="button" id="btCalc"><strong>Calcular</strong></button>
-          <button type="reset" id="btLimp"><strong>Limpar</strong></button>
-        </div>
-      </form>
-
-    </div>
+      <div>
+        <button type="button" id="btTrocaTema"><strong>Trocar Tema</strong></button>
+      </div>
+      
+    </main>
 
     <script src="ex5.js"></script>
   </body>

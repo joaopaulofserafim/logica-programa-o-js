@@ -29,15 +29,7 @@ document.querySelector('#btClean').addEventListener('click', function () {
 })    
 
 
-document.querySelector('#btTrocaTema').addEventListener('click', function() {
-   
-    if (document.documentElement.getAttribute('data-tema') === 'light') {
-        document.documentElement.setAttribute('data-tema', 'dark');
-        
-    } else {
-        document.documentElement.setAttribute('data-tema', 'light');
-    }
-});
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -47,4 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
     menuIcon.addEventListener('click', function() {
         menu.classList.toggle('active');
     });
+});
+
+document.querySelector('#btTrocaTema').addEventListener('click', function() {
+   
+    if (document.documentElement.getAttribute('data-tema') === 'light') {
+        document.documentElement.setAttribute('data-tema', 'dark');
+    } 
+    else {
+        document.documentElement.setAttribute('data-tema', 'light');
+    }
 });

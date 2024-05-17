@@ -167,22 +167,24 @@ button:hover {
 }
 
 
-
 /* EXERCÍCIO 2 */
-.conteudo select {
+#descontoVariavel:hover{
+  border: 1px solid var(--cor-do-texto);
+  cursor: pointer;
+}
+
+#descontoVariavel  {
   cursor: pointer;
   width: 100%;
   padding: 8px;
-  border: 1px solid var(--cor-do-texto);
   border-radius: 40px;
   margin-bottom: 10px;
-  background-color: var(--plano-fundo);
+  background-color: white;
   color: var(--resultado-conta);
 }
 
-.conteudo select:focus {
+#descontoVariavel:focus {
   outline: none;
-  /*RETIRA A BORDA PADRÃO AO SELECINAR O INPUT */
   box-shadow: 0 0 8px var(--cor-botao);
 }
 

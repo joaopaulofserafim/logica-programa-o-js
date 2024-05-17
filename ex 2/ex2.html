@@ -31,14 +31,20 @@
 
     <main>
       <section class="container">
+
         <form action="" id="form">
+
           <div class="conteudo">
+
             <label for="clientess"><strong> Desconto de:</strong></label>
-            <select name="" id="clientess">
+            <input list="descontos" id="descontoVariavel">
+
+            <datalist id="descontos" class="datalist">
               <option value="Comum">Cliente Comum</option>
               <option value="Funcionario">Funcionário</option>
               <option value="VIP">Cliente VIP</option>
-            </select>
+            </datalist>
+
           </div>
 
           <div>
@@ -56,10 +62,9 @@
       </section>
 
       <div>
-        <button type="button" id="btTrocaTema">
-          <strong>Trocar Tema</strong>
-        </button>
+        <button type="button" id="btTrocaTema"><strong>Trocar Tema</strong></button>
       </div>
+      
     </main>
 
     <script src="ex2.js"></script>

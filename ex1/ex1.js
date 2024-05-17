@@ -39,3 +39,14 @@ document.addEventListener('DOMContentLoaded', function() { /*'DOMContentLoaded' 
     });
 });
   // 
+
+
+  document.querySelector('#btTrocaTema').addEventListener('click', function() {
+   
+    if (document.documentElement.getAttribute('data-tema') === 'light') {
+        document.documentElement.setAttribute('data-tema', 'dark');
+    } 
+    else {
+        document.documentElement.setAttribute('data-tema', 'light');
+    }
+});
