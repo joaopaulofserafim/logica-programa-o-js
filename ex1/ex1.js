@@ -31,8 +31,8 @@ function TipoTriangulo(ladoA, ladoB, ladoC) {
 
     //   MENU HAMBURGUER
 document.addEventListener('DOMContentLoaded', function() { /*'DOMContentLoaded'  UTILIZADO PARA GARANTIR QUE O HTML SEJA LIDO COMPLETAMENTO ANTES DE EXECUTAR O JS */
-    const menuIcon = document.querySelector('#menu-icon');
-    const menu = document.querySelector('#menu');
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu');
 
     menuIcon.addEventListener('click', function() {
         menu.classList.toggle('active'); /* "TOGGLE"  usada para alternar entre duas classes ou estados de um elemento HTML. */

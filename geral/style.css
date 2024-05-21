@@ -3,83 +3,98 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /* BODY PG GERAL */
 body {
-
     color: rgb(0, 0, 0);
     min-height: 100vh;
     background-color: #dbe1ffd1;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr;
 }
 
-/* MENU\HEADER */
-.menu-navegacao>ul {
-    height: 100%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: stretch;
-    list-style: none;
-}
-
-
-
-.menu-navegacao a {
-    height: 100%;
-    display: inline-flex;
-    align-items: center;
-    color: #ffffff;
-    /* text-transform: uppercase; */
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 1.2rem;
-    padding: 0 1rem;
-    text-decoration: none;
-}
-
-.menu-navegacao a:hover {
-    cursor: pointer;
-    background-color: ghostwhite;
-    color: #687ef8;
-    transition-duration: 300ms;
-}
-
-.allHeader {
-    display: flex;
+/* HEADER */
+header {
     background: linear-gradient(to right, #7e91ff, #4863fc, #1808ff);
-    height: 65px;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px 20px;
 }
 
-.logo span {
-    color: #ffffff;
-    font-family: 'Ubuntu', sans-serif;
+.logo {
     font-size: 2rem;
     font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-    margin-inline-start: 2.5rem;
+    color: #ffffff;
 }
 
-/* MENU\HEADER FINISH */
 
 
-/* ARTICLE */
 
-.gridConteudo {
+/* MENU HAMBURGUER  */
+
+.menu-icon {
+    cursor: pointer;
+    width: 3%;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  
+  
+  .menu-icon .bar {
+    height: 4px;
+    width: 80%;
+    background-color: var(--plano-fundo);
+    border-radius: 100px;
+    margin: 4px 20px;
+  }
+  
+  .menu {
+    display: none;
+    flex-direction: column;
+    background-color: var(--plano-fundo);
+    position: absolute;
+    top: 100px;
+  }
+  
+  .menu li {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .menu li:hover {
+    background-color: #c5c5c529;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: var(--cor-botao);
+    padding: 15px;
+    display: block;
+  }
+  
+  .menu.active {
+    display: flex;
+  }
+  
+
+/* MAIN CONTENT */
+main {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
 article {
     background-color: #fffaeee9;
     padding: 20px;
-    border-radius: 5px;
-    height: 10rem;
-    overflow-y: auto;
     border-radius: 10px;
-    margin: 20px;
-
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
 article::-webkit-scrollbar {
@@ -115,21 +130,21 @@ p {
 }
 
 /* BOTÃO ARTICLE */
-
 #botaoAcesso {
-    width: 100px;
+    display: inline-block;
     background-color: #6c82ff;
     color: white;
     border-radius: 20px;
-    padding: 10px 90px;
+    padding: 10px 20px;
     border: none;
-    margin-left: 50px;
-    line-height: 70px;
+    margin-top: 10px;
+    text-align: center;
     font-weight: bold;
     text-decoration: none;
+    transition: background-color 0.3s;
 }
 
-#botaoAcesso:hover{
+#botaoAcesso:hover {
     cursor: pointer;
     background-color: #0000ff;
     color: white;
