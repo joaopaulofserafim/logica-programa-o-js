@@ -48,7 +48,7 @@
   height: 4px;
   width: 80%;
   background-color: var(--cor-botao);
-  border-radius: 100px;
+  border-radius: 20px;
   margin: 4px 20px;
 }
 
@@ -71,7 +71,7 @@
 
 .menu li a {
   text-decoration: none;
-  color: var(--cor-botao);
+  color:var(--cor-botao);
   padding: 15px;
   display: block;
 }
@@ -87,8 +87,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: var(--plano-fundo);
 }
-
-header {
+header{
   display: flex;
 }
 
@@ -169,12 +168,12 @@ button:hover {
 
 
 /* EXERCÍCIO 2 */
-#descontoVariavel:hover {
+#descontoVariavel:hover{
   border: 1px solid var(--cor-do-texto);
   cursor: pointer;
 }
 
-#descontoVariavel {
+#descontoVariavel  {
   cursor: pointer;
   width: 100%;
   padding: 8px;
@@ -274,7 +273,7 @@ td {
   background-color: var(--plano-fundo);
 }
 
-#valorFinalEx5 {
+#valorFinalEx5{
   margin-top: 5px;
   margin-bottom: 5px;
   color: var(--resultado-conta);
@@ -285,12 +284,12 @@ td {
 
 /* EXERCÍCIO 6  */
 
-#codigoProduto:focus {
+#codigoProduto:focus{
   outline: none;
   box-shadow: 0 0 8px var(--cor-botao);
 }
 
-#qtdeProduto:focus {
+#qtdeProduto:focus{
   outline: none;
   box-shadow: 0 0 8px var(--cor-botao);
 }
@@ -299,23 +298,23 @@ td {
 
 /* EXERCÍCIO 7  */
 
-#habitantes:focus {
+#habitantes:focus{
   outline: none;
   box-shadow: 0 0 8px var(--cor-botao);
 }
 
-#obitos:focus {
+#obitos:focus{
   outline: none;
   box-shadow: 0 0 8px var(--cor-botao);
 }
 
-#nascimentos:focus {
+#nascimentos:focus{
   outline: none;
   box-shadow: 0 0 8px var(--cor-botao);
 }
 
 
-.bttEx7 {
+.bttEx7{
   margin-top: 5%;
   display: flex;
   justify-content: space-evenly;
@@ -345,114 +344,5 @@ td {
 
 
 
-
-/* PAGINA HOME  */
-
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Header and Navigation */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: #fff; /* Altere para a cor de fundo desejada */
-}
-
-.allHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #000; /* Altere para a cor de texto desejada */
-}
-
-.menu-navegacao {
-  display: flex;
-  align-items: center;
-}
-
-.menu-navegacao ul {
-  display: flex;
-  list-style: none;
-}
-
-.menu-navegacao ul li {
-  margin: 0 10px;
-}
-
-.menu-navegacao ul li a {
-  text-decoration: none;
-  color: #000; /* Altere para a cor de texto desejada */
-  padding: 10px 15px;
-  transition: background-color 0.3s;
-}
-
-.menu-navegacao ul li a:hover {
-  background-color: #ddd; /* Altere para a cor de hover desejada */
-  border-radius: 5px;
-}
-
-.menu-icon {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-.menu-icon .bar {
-  width: 25px;
-  height: 3px;
-  margin: 4px 0;
-  background-color: #000; /* Altere para a cor desejada */
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .menu-navegacao ul {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: #fff; /* Altere para a cor de fundo desejada */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .menu-navegacao ul li {
-    margin: 10px 0;
-  }
-
-  .menu-icon {
-    display: flex;
-  }
-
-  .menu-navegacao ul.active {
-    display: flex;
-  }
-}
-
-/* For smaller screens */
-@media (max-width: 480px) {
-  .menu-icon .bar {
-    width: 20px;
-    height: 2px;
-  }
-
-  .menu-navegacao ul li a {
-    padding: 8px 12px;
-  }
-}
 
 
