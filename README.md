@@ -1,97 +1,63 @@
-# logica-programa-o-js
-Treinando Js
+# Lista de Exercícios
 
-## operadores-aritmeticos.js
+Este projeto é uma lista de exercícios simples implementada em HTML e CSS, com links para diferentes páginas de exercícios. Cada exercício é descrito e possui um link para sua própria página específica.
 
-~~~js
-const numero1 = 40;
-const numero2 = 20;
-~~~
+## Estrutura do Projeto
 
+- `index.html`: Página principal contendo a lista de exercícios.
+- `/css/reset.css`: CSS para redefinição de estilos.
+- `/geral/style.css`: CSS geral para estilização da página principal.
+- `/css/responsividade.css`: CSS para garantir a responsividade da página.
+- `/geral/navbar.css`: CSS específico para estilizar a barra de navegação.
+- `/geral/navba.js`: JavaScript para funcionalidades da barra de navegação (script ainda não implementado).
 
-A palavra `const` é utilizada para declaração de variaves que não permitem reatribuição (Não vão ser reatribuidas).
+## Descrição dos Exercícios
 
-Aqui declaramos duas constantes de serão calculadas no bloco a seguir. 
+### Exercício 1
+- **Descrição**: O programa lê as medidas dos lados de um triângulo e determina sua classificação (equilátero, isósceles ou escaleno).
+- **Link**: [Acessar](./ex1/ex1.html)
 
-~~~js
-console.log(`Os números das operações são ${numero1} e ${numero2}`);
-console.log(`A soma dos números è: ${numero1 + numero2}`);
-console.log(`A subtracao dos números è: ${numero1 - numero2}`);
-console.log(`A multiplicacao dos números è: ${numero1 * numero2}`);
-console.log(`A divisao dos números è: ${numero1 /  numero2}`);
-console.log(`O resto dos números è: ${numero1 % numero2}`);
-~~~
+### Exercício 2
+- **Descrição**: O programa calcula o valor total a ser pago por uma pessoa após a aplicação de descontos com base no tipo de cliente (comum, funcionário ou VIP).
+- **Link**: [Acessar](./ex2/ex2.html)
 
+### Exercício 3
+- **Descrição**: O programa determina o resultado de um jogo de futebol (empate, vitória do primeiro time ou vitória do segundo time) com base nos gols marcados por cada equipe.
+- **Link**: [Acessar](./ex3/ex3.html)
 
-Em cada uma das operações temos um operador aritmetico:
+### Exercício 4
+- **Descrição**: O programa armazena os nomes de 10 pessoas em um vetor e permite a busca de um nome específico, exibindo se o nome foi encontrado ou não.
+- **Link**: [Acessar](./ex4/ex4.html)
 
-* `+` soma
-* `-` subtração
-* `*` multiplicação
-* `/` divisão
-* `%` resto
-* `**` Potênciação
+### Exercício 5
+- **Descrição**: O programa calcula o valor a ser pago por um cliente com base na quantidade de litros e no tipo de combustível (Álcool ou Gasolina) e aplica descontos conforme uma tabela fornecida.
+- **Link**: [Acessar](./ex5/ex5.html)
 
-## operadores-atribuicao.js
+### Exercício 6
+- **Descrição**: O programa calcula o desconto aplicado na compra de produtos com base na quantidade adquirida e no código do produto.
+- **Link**: [Acessar](./ex6/ex6.html)
 
-~~~js
-let numero = 10;
-~~~
+### Exercício 7
+- **Descrição**: O programa calcula indicadores demográficos (taxa de natalidade e mortalidade) com base no número de habitantes, nascimentos e óbitos de uma população.
+- **Link**: [Acessar](./ex7/ex7.html)
 
-Declaramos a variavel `numero` usando a palavra `let`, pois essa variavel será **reatribuida** ao longo do nosso codigo.
+## Como Usar
 
-Em seguida, fazemos uma série de reatribuição usanso os operadores de atribuição.
+1. Clone o repositório para sua máquina local.
+    ```sh
+    git clone https://github.com/seu-usuario/lista-de-exercicios.git
+    ```
 
-~~~js
-console.log(`O número é inicialmente igual a ${numero}`);
-console.log(`Após reatribuir somando o número 10: ${numero += 10 }`);
-console.log(`Reatribuindo e subtraindo 10: ${numero -= 10}`)
-console.log(`Reatribuir e multiplicar 10: ${numero *= 10}`);
-console.log(`Reatribuir e dividir 10: ${numero /=10}`);
-console.log(`Reatribuindo para o resto da divisão por 10: ${numero %= 10}`);
-console.log(`Incrementado o número em 1: ${++ numero}`)
-console.log(`Decrementado o número em 1: ${-- numero}`)
-console.log(`O número final é igual a: ${numero}`);
-~~~
+2. Navegue até o diretório do projeto.
+    ```sh
+    cd lista-de-exercicios
+    ```
 
-Operacadores de atribuição:
+3. Abra o arquivo `index.html` em seu navegador preferido para ver a página principal com a lista de exercícios.
 
-* `+=` Atribuição com soma
-* `-=` Atribuição com subtração 
-* `*=` Atribuição com multiplicação 
-* `/=` Atribuição com divisão 
-* `%=` Atribuição com o resto da divisão 
-* `++` Atribuição com **incremento1**  ( *Pré* ou *Pós* incrementado). Ex: `numero ++` (Pós-incrementado) ou `++ numero` (pré-incrementado).
-* `--` Atribuição com **decremento1**  ( *Pré* ou *Pós* decrementado). Ex: `numero --` (Pós-incrementado) ou `-- numero` (Pré-incrementado).
+## Estrutura de Diretórios
 
 
-## operadores-comparacao.js
+## Contato
 
-Neste arquivo conhecemos os operadores de comparação e a estrutura lógica de decisão **if-else**.
-
-Utilizamos a palavra `if` para declarar uma condição e a palavra `else` como um complemento "Se não"
-
-~~~js
-const a = 50, b = 50;
-const condicao = a == b;
-
-if (condicao) {
-    console.log('VERDADEIRO');
-} else {
-    console.log('FALSO');
-}
-~~~
-
-Está estrutura exibe no console se a condição testada é `true` (verdadeira) ou `false` (falsa), utilisando `if` e `else` para fazer a comparação.
-
-
-Operadores de comparação:
-
-* `==`  é igual
-* `!=`  não é igual  
-* `>`   maior que  
-* `>=`  maior OU igual 
-* `<=`  menor OU igual
-* `===` é estritamente igual (Valor e tipo)
-* `!==` não é estritamente igual (Valor e tipo )
-
+Para mais informações, entre em contato com [Joao Paulo](mailto:jpfserafim72@gmail.com).
