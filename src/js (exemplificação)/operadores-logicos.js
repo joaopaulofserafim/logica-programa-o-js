@@ -1,6 +1,6 @@
 const a = true, b = true;
 
-if {
+if (true){
     console.log ( `Verdadeiro`);
 
 } else  {

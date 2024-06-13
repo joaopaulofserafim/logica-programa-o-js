@@ -98,9 +98,12 @@ header{
   max-width: 400px;
 }
 
-.title {
+
+h1{
   text-align: center;
   color: var(--cor-do-texto);
+  font-weight: 600;
+  font-size: 2.1rem;
 }
 
 .conteudo {
@@ -112,6 +115,8 @@ label {
   display: block;
   margin-bottom: 5px;
   color: var(--cor-do-texto);
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 input {
@@ -140,6 +145,7 @@ button {
   border-radius: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-weight: 700;
 }
 
 button:hover {
