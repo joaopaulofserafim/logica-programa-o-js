@@ -6,7 +6,7 @@ document.querySelector('#btV').addEventListener('click', function () {
     document.querySelector('#valorFinal').innerHTML = resultado;
 });
 document.querySelector('#btClean').addEventListener('click', function () {
-    document.querySelector('#valorFinal').innerHTML = "";
+    document.querySelector('#valorFinal').innerHTML = " ";
 });
 
 
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() { /*'DOMContentLoaded' 
 
   document.querySelector('#btTrocaTema').addEventListener('click', function() {
    
-    if (document.documentElement.getAttribute('data-tema') === 'light') {
+    if (document.documentElement.getAttribute('data-tema') == 'light') {
         document.documentElement.setAttribute('data-tema', 'dark');
     } 
     else {
