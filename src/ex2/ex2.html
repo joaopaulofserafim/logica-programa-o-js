@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="/src/Pagina Home/estilos.js"></script>
+    <script src="/src/Pagina Home/estilos.js" defer></script>
     <title>Desconto</title>
   </head>
   <body>
@@ -15,28 +15,28 @@
       </div>
       <nav class="menu" id="menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="src/ex1/ex1.html">Exercício 1 </a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/src/ex1/ex1.html">Exercício 1 </a></li>
           <li><a href="/src/ex3/ex3.html">Exercício 3</a></li>
-          <li><a href="src/ex4/ex4.html">Exercício 4</a></li>
-          <li><a href="src/ex5/ex5.html">Exercício 5</a></li>
-          <li><a href="src/ex6/ex6.html">Exercício 6</a></li>
-          <li><a href="src/ex7/ex7.html">Exercício 7</a></li>
+          <li><a href="/src/ex4/ex4.html">Exercício 4</a></li>
+          <li><a href="/src/ex5/ex5.html">Exercício 5</a></li>
+          <li><a href="/src/ex6/ex6.html">Exercício 6</a></li>
+          <li><a href="/src/ex7/ex7.html">Exercício 7</a></li>
         </ul>
       </nav>
     </header>
 
-    <h1 class="title">Desconto Variável</h1>
-
+    
     <main>
       <section class="container">
+        <h1 class="title">Desconto Variável</h1>
 
         <form action="" id="form">
 
           <div class="conteudo">
 
             <label for="clientess"><strong> Desconto de:</strong></label>
-            <input list="descontos" id="descontoVariavel">
+            <input list="descontos" id="clientess">
 
             <datalist id="descontos" class="datalist">
               <option value="Comum">Cliente Comum</option>
@@ -46,7 +46,7 @@
 
           </div>
 
-          <div>
+          <div class="conteudo2">
             <label for="valor"><strong>Valor:</strong></label>
             <input type="number" id="valor" class="valorInput" >
           </div>
@@ -66,6 +66,6 @@
       
     </main>
 
-    <script src="src/ex2/ex2.js"></script>
+    <script src="/src/ex2/ex2.js"></script>
   </body>
 </html>
