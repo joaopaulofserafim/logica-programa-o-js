@@ -5,10 +5,6 @@ document.querySelector('#btV').addEventListener('click', function () {
     const resultado = TipoTriangulo(LadoA, LadoB, LadoC);
     document.querySelector('#valorFinal').innerHTML = resultado;
 });
-document.querySelector('#btClean').addEventListener('click', function () {
-    document.querySelector('#valorFinal').innerHTML = " ";
-});
-
 
 function TipoTriangulo(ladoA, ladoB, ladoC) {
     if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC) || ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
@@ -25,6 +21,11 @@ function TipoTriangulo(ladoA, ladoB, ladoC) {
         return "Escaleno";
     }
 }
+
+document.querySelector('#btClean').addEventListener('click', function () {
+    document.querySelector('#valorFinal').innerHTML = " ";
+    document.querySelector('#LadoA').innerHTML = " ";
+});
 
 
 
