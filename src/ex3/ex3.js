@@ -3,17 +3,17 @@ document.querySelector('#btVer').addEventListener('click', function () {
    let timeA = parseInt(document.querySelector('#TimeA').value);
    let timeB = parseInt(document.querySelector('#TimeB').value);
 
-   if (isNaN(timeA)|| isNaN(timeB)){
-      window.alert('Por favor, insira válidos para os placares');
-   }
    
-
+   
    let resultado = verificarResultado(timeA, timeB)
    document.querySelector('#valorFinal').innerHTML = resultado
-
-
+   
+   
    function verificarResultado(timeA, timeB){
       
+      if (isNaN(timeA)|| isNaN(timeB)){
+        return 'Por favor, insira válidos para os placares'
+      }
       if (timeA < 0 || timeB < 0) {
         window.alert('Adicione um valor maior ou igual a Zero') 
       }else if (timeA === timeB) {
