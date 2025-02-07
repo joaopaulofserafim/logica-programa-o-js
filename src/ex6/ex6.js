@@ -17,8 +17,6 @@ document.querySelector('#btCalcular').addEventListener('click', function () {
 
 });
 
-
-
 const produtos = [
     {
         codigo: 1,
@@ -74,8 +72,6 @@ function calculaDesconto(codigoProduto, qtdeProduto) {
 document.querySelector('#btClean').addEventListener('click', function () {
     document.querySelector('#resultado').innerHTML = " "
 });
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
