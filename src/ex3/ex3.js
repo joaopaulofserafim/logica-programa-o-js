@@ -10,7 +10,7 @@ document.querySelector('#btVer').addEventListener('click', function () {
    
    
    function verificarResultado(timeA, timeB){
-      
+    
       if (isNaN(timeA)|| isNaN(timeB)){
         return 'Por favor, insira válidos para os placares'
       }
@@ -29,6 +29,9 @@ document.querySelector('#btVer').addEventListener('click', function () {
 
 document.querySelector('#clean').addEventListener('click', function () {
    document.querySelector('#valorFinal').innerHTML = " ";
+   document.querySelector('#TimeA').value = " ";
+   document.querySelector('#TimeB').value = " ";
+
 });
 
 

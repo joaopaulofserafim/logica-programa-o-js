@@ -24,10 +24,12 @@ function TipoTriangulo(ladoA, ladoB, ladoC) {
 
 document.querySelector('#btClean').addEventListener('click', function () {
     document.querySelector('#valorFinal').innerHTML = " ";
-    document.querySelector('#LadoA').innerHTML = " ";
-    document.querySelector('#LadoB').innerHTML = " ";
-    document.querySelector('#LadoC').innerHTML = " ";
+    document.querySelector('#LadoA').value = " ";
+    document.querySelector('#LadoB').value = " ";
+    document.querySelector('#LadoC').value = " ";
 });
+
+
 
 
 

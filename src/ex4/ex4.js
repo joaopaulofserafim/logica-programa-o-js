@@ -16,22 +16,69 @@ let nomes = [];
 
 document.querySelector('#btCadastrar').addEventListener('click', function () {
     let nomeInserido = (document.querySelector('#nome').value.toUpperCase());
-    nomes.push(nomeInserido)
-    if (nomes.length === 10) {
+
+    if(nomeInserido.trim() !== ''){
+        nomes.push(nomeInserido);
+        document.querySelector('#nome').value = '';
+
+    }
+
+    else if (nomes.length === 10) {
         document.querySelector('label[for= "nome"]').innerHTML = '<strong>Agora pesquise um nome:</strong>';
         document.querySelector('#btCadastrar').classList.add('oculto');
         document.querySelector('#btPesquisar').classList.remove('oculto');
+    }
+
+    else if (nomes.length > 10){
+        alert('Limite de cadastro atigindo');
+        return;
+    
     }
 });
 document.querySelector('#btPesquisar').addEventListener('click', function () {
     const nomeBuscado = document.querySelector('#nome').value.toUpperCase();
 
     if (nomes.includes(nomeBuscado)) {
-        document.querySelector('#valorFinal').innerHTML = '<strong>Nome existente</strong>';
+        document.querySelector('#valorFinal').innerHTML = '<strong>Nome Cadastrado</strong>';
     } else {
-        document.querySelector('#valorFinal').innerHTML = '<strong>Nome inexistente</strong>'
+        document.querySelector('#valorFinal').innerHTML = '<strong>Nome não Cadastrado</strong>'
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuIcon = document.getElementById('menu-icon');
@@ -51,4 +98,3 @@ document.querySelector('#btTrocaTema').addEventListener('click', function() {
         document.documentElement.setAttribute('data-tema', 'light');
     }
  });
- 
