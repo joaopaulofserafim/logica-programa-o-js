@@ -11,7 +11,8 @@ document.querySelector('#btCalcular').addEventListener('click', function () {
     const pValorFinal = document.createElement('p');
     pValorFinal.innerHTML = produto.valorFinal.toFixed(2);
     pValorFinal.classList.add('monetario')
-
+    
+    document.querySelector('#resultado').innerHTML = ""
     document.querySelector('#resultado').append(pDescricao, pValorFinal);
 
 });
@@ -35,6 +36,8 @@ const produtos = [
         descricao: "Quebra Queixo"
     }
 ];
+
+
 function calculaDesconto(codigoProduto, qtdeProduto) {
     let preco;
     let desconto;

@@ -1,83 +1,55 @@
 
-document.addEventListener('keydown', function (evento) {
+let nomes = [];
 
+document.addEventListener('keydown', function (evento) {
     if (evento.key === 'Enter') {
         evento.preventDefault();
 
         if (nomes.length < 10) {
             document.querySelector('#btCadastrar').click();
         } else {
-            document.querySelector('#btPesquisar').click()
+            document.querySelector('#btPesquisar').click();
         }
     }
 });
 
-let nomes = [];
-
 document.querySelector('#btCadastrar').addEventListener('click', function () {
-    let nomeInserido = (document.querySelector('#nome').value.toUpperCase());
+    let nomeInserido = document.querySelector('#nome').value.toUpperCase().trim();
 
-    if(nomeInserido.trim() !== ''){
-        nomes.push(nomeInserido);
-        document.querySelector('#nome').value = '';
-
+    if (nomes.length >= 10) {
+        alert('Limite de cadastro atingido!');
+        return;
     }
 
-    else if (nomes.length === 10) {
-        document.querySelector('label[for= "nome"]').innerHTML = '<strong>Agora pesquise um nome:</strong>';
+    if (nomeInserido !== '') {
+        nomes.push(nomeInserido);
+        document.querySelector('#nome').value = '';
+    } else {
+        alert('Por favor, insira um nome válido.');
+        return;
+    }
+
+    if (nomes.length === 10) {
+        document.querySelector('label[for="nome"]').innerHTML = '<strong>Agora pesquise um nome:</strong>';
         document.querySelector('#btCadastrar').classList.add('oculto');
         document.querySelector('#btPesquisar').classList.remove('oculto');
     }
-
-    else if (nomes.length > 10){
-        alert('Limite de cadastro atigindo');
-        return;
-    
-    }
 });
+
 document.querySelector('#btPesquisar').addEventListener('click', function () {
-    const nomeBuscado = document.querySelector('#nome').value.toUpperCase();
+    const nomeBuscado = document.querySelector('#nome').value.toUpperCase().trim();
+
+    if (nomeBuscado === '') {
+        alert('Digite um nome para pesquisar.');
+        return;
+    }
 
     if (nomes.includes(nomeBuscado)) {
         document.querySelector('#valorFinal').innerHTML = '<strong>Nome Cadastrado</strong>';
     } else {
-        document.querySelector('#valorFinal').innerHTML = '<strong>Nome não Cadastrado</strong>'
+        document.querySelector('#valorFinal').innerHTML = '<strong>Nome não Cadastrado</strong>';
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -98,3 +70,8 @@ document.querySelector('#btTrocaTema').addEventListener('click', function() {
         document.documentElement.setAttribute('data-tema', 'light');
     }
  });
+
+ document.querySelector('#btClean').addEventListener('click', function(){
+    document.querySelector('#valorFinal').innerHTML = ''
+    nomes = [];
+ })

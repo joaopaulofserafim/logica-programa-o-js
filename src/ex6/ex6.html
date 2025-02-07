@@ -33,20 +33,21 @@
       <form action="">
         <div class="conteudo">
           <label for="codigoProduto"><strong>Código do produto:</strong></label>
-          <input type="text" id="codigoProduto" required autofocus />
+          <input type="text" id="codigoProduto" required autofocus placeholder= "Insira o código do produto" />
         </div>
 
         <div class="conteudo">
           <label for="qtdeProduto"><strong>Quantidade:</strong></label>
-          <input type="text" id="qtdeProduto" required />
+          <input type="text" id="qtdeProduto" required    placeholder = "Insira a quantidade" />
         </div>
+
+        <div id="resultado"> </div> 
 
         <div class="btt">
           <button type="button" class="acao-positiva" id="btCalcular"><strong>Calcular</strong></button>
           <button type="reset" class="acao-negativa" id="btClean"><strong> Resetar</strong></button>
         </div>
 
-        <div id="resultado"></div>
       </form>
 
       <div>
